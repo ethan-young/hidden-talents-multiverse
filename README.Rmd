@@ -137,5 +137,6 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
 file_list %>% 
   select(dir,script, input, output) %>% 
   gt(id = "one", rowname_col = "row", groupname_col = "dir") %>% 
-  fmt_markdown(columns = T)
+  fmt_markdown(columns = T) %>% 
+  gt::as_raw_html()
 ```
