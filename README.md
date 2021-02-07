@@ -4,15 +4,31 @@ Hidden Talents Multiverse Analysis
 This repository contains data, code, and (some) output for a working
 manuscript by Young, Frankenhuis, and Ellis (in progress).
 
-## IMPORTANT
+## IMPORTANT!!
 
 The file sizes of many output files produced by scripts in this
 repository are very large. As a consequence, these output files are not
 tracked here (see .gitignore). To preserve the directory structure,
 files named `0-placeholder.txt` have been added to output directories.
-This ensures that, if you were to run code that produces output not
-tracked here, the correct directory exists so files can be reproduced
-and saved.
+This ensures that scripts can reproduce and save output to the correct
+directory (without having to manually add them).
+
+## Preregistration
+
+Details about the participants, methods, procedures, and analysis plans
+can be found on the Open Science Framework (OSF). Below are the relevant
+links for different aspects of the project:
+
+-   [OSF project](https://osf.io/6r95z/)
+-   [Original preregistration](https://osf.io/d2gz6/)
+-   [Overview of measures](https://osf.io/5kawy/), which fully describes
+    what was collected (including measures not used/analyzed in this
+    project). Specific variable codebooks for the current project are
+    contained in this repository (see Codeboooks below).
+-   [Final preregistration](https://osf.io/4vsnz/) which also contains a
+    preliminary write-up of the Methods for an eventual publication
+-   [Secondary analysis plan - set 1](https://osf.io/7fu35/)
+-   [Secondary analysis plan - set 2](https://osf.io/wcauf/)
 
 ## Directory Structure
 
@@ -163,7 +179,9 @@ These are all figures that are produced by R-scripts. They are divided
 into the following categories:
 
 -   Primary analysis figures
+
 -   Secondary analysis figures
+
     -   Set 1
     -   Set 2
 
