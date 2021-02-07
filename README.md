@@ -1,20 +1,18 @@
 Hidden Talents Multiverse Analysis
 ================
 
-<style>
-table{
-  font-size: 14px;
-}
-td{
-  vertical-align: top;
-}
-.gt_row{
-  vertical-align: top;
-}
-</style>
-
-This repository contains all data, code, and output for a working
+This repository contains data, code, and (some) output for a working
 manuscript by Young, Frankenhuis, and Ellis (in progress).
+
+## IMPORTANT
+
+The file sizes of many output files produced by scripts in this
+repository are very large. As a consequence, these output files are not
+tracked here (see .gitignore). To preserve the directory structure,
+files named `0-placeholder.txt` have been added to output directories.
+This ensures that, if you were to run code that produces output not
+tracked here, the correct directory exists so files can be reproduced
+and saved.
 
 ## Directory Structure
 
@@ -47,16 +45,19 @@ Below is a simple visualization of the full directory structure.
     ## │   └── data2_analysis.Rdata
     ## ├── figures
     ## │   ├── primary
+    ## │   │   ├── 0-placeholder.txt
     ## │   │   ├── interactions.pdf
     ## │   │   ├── spec-curve-shifting.pdf
     ## │   │   └── spec-curve-updating.pdf
     ## │   └── secondary
     ## │       ├── set-1
+    ## │       │   ├── 0-placeholder.txt
     ## │       │   ├── a1-interactions.pdf
     ## │       │   ├── a1-spec-curve-updating.pdf
     ## │       │   ├── b1-interactions.pdf
     ## │       │   └── b1-spec-curve-updating.pdf
     ## │       └── set-2
+    ## │           ├── 0-placeholder.txt
     ## │           ├── a1-ses-interactions.pdf
     ## │           ├── a1-ses-shifting.pdf
     ## │           ├── a1-ses-updating.pdf
@@ -68,9 +69,11 @@ Below is a simple visualization of the full directory structure.
     ## │           └── a1-vio-updating.pdf
     ## ├── multiverse-objects
     ## │   ├── 1-multiverse-datasets
+    ## │   │   ├── 0-placeholder.txt
     ## │   │   ├── datalist-agg-ivs.Rdata
     ## │   │   └── datalist-all-ivs.Rdata
     ## │   ├── 2-primary-analyses
+    ## │   │   ├── 0-placeholder.txt
     ## │   │   ├── 1-confirmatory-results.Rdata
     ## │   │   ├── 2-exploratory-results.Rdata
     ## │   │   ├── 3-extracted-effects.Rdata
@@ -78,11 +81,13 @@ Below is a simple visualization of the full directory structure.
     ## │   │   └── 5-bootstrapped-effects.Rdata
     ## │   └── 3-secondary-analyses
     ## │       ├── set-1
+    ## │       │   ├── 0-placeholder.txt
     ## │       │   ├── a1-results-ses-vio.Rdata
     ## │       │   ├── a2-extracted-effects.Rdata
     ## │       │   ├── b1-results-ses-components.Rdata
     ## │       │   └── b2-extracted-effects.Rdata
     ## │       └── set-2
+    ## │           ├── 0-placeholder.txt
     ## │           ├── a1-extracted-effects.Rdata
     ## │           ├── a1-results-expanded-shifting.Rdata
     ## │           └── a1-results-expanded-updating.Rdata
@@ -338,7 +343,7 @@ provides an overview of the inputs and outputs of each script.
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   text-transform: inherit;
   border-top-style: solid;
   border-top-width: 2px;
@@ -360,7 +365,7 @@ provides an overview of the inputs and outputs of each script.
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: initial;
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -533,10 +538,6 @@ provides an overview of the inputs and outputs of each script.
 #one .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
-}
-
-#one .gt_row {
-  vertical-align: top;
 }
 </style>
 <div id="one" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">

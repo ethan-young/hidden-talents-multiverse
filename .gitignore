@@ -4,9 +4,8 @@
 .Ruserdata
 .DS_Store
 **/.DS_Store
-multiverse-objects/1-multiverse-datasets/*
-multiverse-objects/2-primary-analyses/*
-multiverse-objects/3-secondary-analyses/*
-figures/primary/*
-figures/secondary/set-1/*
-figures/secondary/set-2/*
+multiverse-objects/1-multiverse-datasets/*Rdata
+multiverse-objects/2-primary-analyses/*Rdata
+multiverse-objects/3-secondary-analyses/**/*Rdata
+figures/primary/*pdf
+figures/secondary/**/*pdf

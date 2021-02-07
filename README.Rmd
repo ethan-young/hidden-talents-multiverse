@@ -3,18 +3,6 @@ title: "Hidden Talents Multiverse Analysis"
 output: github_document
 ---
 
-<style>
-table{
-  font-size: 14px;
-}
-td{
-  vertical-align: top;
-}
-.gt_row{
-  vertical-align: top;
-}
-</style>
-
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
@@ -22,7 +10,11 @@ library(tidyverse)
 library(gt)
 ```
 
-This repository contains all data, code, and output for a working manuscript by Young, Frankenhuis, and Ellis (in progress). 
+This repository contains data, code, and (some) output for a working manuscript by Young, Frankenhuis, and Ellis (in progress). 
+
+## IMPORTANT
+
+The file sizes of many output files produced by scripts in this repository are very large. As a consequence, these output files are not tracked here (see .gitignore). To preserve the directory structure, files named `0-placeholder.txt` have been added to output directories. This ensures that, if you were to run code that produces output not tracked here, the correct directory exists so files can be reproduced and saved.
 
 ## Directory Structure
 
@@ -132,16 +124,6 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
 file_list %>% 
   select(dir,script, input, output) %>% 
   gt(id = "one", rowname_col = "row", groupname_col = "dir") %>% 
-  fmt_markdown(columns = T) %>% 
-  tab_options(
-    row_group.font.weight = "bold",
-  ) %>% 
-  opt_css(
-    css = "
-    #one .gt_row {
-      vertical-align: top;
-    }
-    "
-  )
+  fmt_markdown(columns = T)
 ```
 
