@@ -23,8 +23,8 @@ links for different aspects of the project:
 -   [Original preregistration](https://osf.io/d2gz6/)
 -   [Overview of measures](https://osf.io/5kawy/), which fully describes
     what was collected (including measures not used/analyzed in this
-    project). Specific variable codebooks for the current project are
-    contained in this repository (see Codeboooks below).
+    project). Variable codebooks for the current project are contained
+    in this repository (see Codebooks below).
 -   [Final preregistration](https://osf.io/4vsnz/) which also contains a
     preliminary write-up of the Methods for an eventual publication
 -   [Secondary analysis plan - set 1](https://osf.io/7fu35/)
