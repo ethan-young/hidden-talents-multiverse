@@ -1,0 +1,147 @@
+---
+title: "Hidden Talents Multiverse Analysis"
+output: github_document
+---
+
+<style>
+table{
+  font-size: 14px;
+}
+td{
+  vertical-align: top;
+}
+.gt_row{
+  vertical-align: top;
+}
+</style>
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+
+library(tidyverse)
+library(gt)
+```
+
+This repository contains all data, code, and output for a working manuscript by Young, Frankenhuis, and Ellis (in progress). 
+
+## Directory Structure
+
+The names of each folder are intended to be self-explanatory. There are five top-level folders to organize the inputs and outputs of this project:
+
+1. `codebooks/`: lists of variable names, labels, and value labels (where applicable).
+2. `data/`: data, stored as an `.Rdata` file and `.csv` files.
+3. `figures/`: all figures that are produced by R-scripts
+4. `multiverse-objects/`: all `.Rdata` files containing objects necessary for performing multiverse analyses and storing intermediary results
+
+Below is a simple visualization of the full directory structure. 
+
+```{r}
+fs::dir_tree(".", regexp = "^README|.Rproj$", invert = T)
+```
+
+Each of the top-level folders are explained in more detail below:
+
+## Codebooks
+
+These are lists of variable names, labels, and value labels (where applicable). Their names correspond to the versions of the data they document (see Data below).
+
+## Data
+
+The raw data for this project contain all variables necessary to produce all multiverse outputs (cleaned data, multiverse datasets, effect sizes, plots). The raw data file is the only file that depends on other files/scripts to create, which saved elsewhere (for confidentiality reasons). 
+
+There are four versions of the data, which can be loaded as `R` objects or read/used as `.csv` files.
+
+1. The raw data
+2. The data after all *non-arbitrary* decisions were executed
+3. A version of the previous step with overall composites for the IVs
+4. A version of the data that contains variables for the multiverse analysis, only
+
+All versions and codebooks are stored in `data/data2_analysis.Rdata`. In addition, the following `.csv` files were created to represent each version of the data separately. The prefixed numbers refer to the step in the process of going from raw to multiverse-ready data.
+
+- `1-raw.csv`
+- `2-non_arbitrary.csv`
+- `3-composites.csv`
+- `4-multiverse_base.csv`
+
+A codebook for these data, including variable labels and value labels (if applicable), can be found in `codebook.csv` at the top level of this directory.
+
+## Figures
+
+These are all figures that are produced by R-scripts. They are divided into the following categories:
+
+- Primary analysis figures
+- Secondary analysis figures
+  - Set 1
+  - Set 2
+
+## Multiverse-objects
+
+There are four steps to doing the multiverse:
+
+1. Specifying a grid of all possible arbitrary data processing decisions
+2. Creating a "multiverse" of alternative data sets one could analyze
+3. Analyzing each "universe" within the multiverse
+4. Extracting the relevant information from the analyses (e.g., effect sizes, p-values, etc.)
+5. Visualizing results or summarizing them in tables
+
+This folder contains all objects necessary for representing each step. Specifically:
+
+- `1-multiverse-datasets`: multiverse data sets with each data universe stored in a list. There is one list used for the composites and one list used for all components of each IV.
+- `2-primary-analyses`: contain the multiverse of full results and extracted effects for the primary confirmatory and exploratory results
+- `3-secondary-analyses`: contain the same objects as above for each set of secondary analyses.
+
+## Data Processing Scripts
+
+There are four types of R-scripts in this repository, each with a separate folder.
+
+- `0-functions/`: custom R-functions written for this project
+- `1-data-prep/`: Data processing scripts 
+- `2-primary-analyses/`: Primary analysis scripts 
+- `3-secondary-analyses/`: Secondary analysis scripts 
+
+Each script takes an input(s) and produces output(s). The table below provides an overview of the inputs and outputs of each script.
+
+```{r}
+file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = T) %>% 
+  map_df(function(x){
+    script_text <- 
+      read_lines(x) %>% 
+      str_subset("load\\(\".*Rdata\"\\)|save.image\\(.*\\)|file = .*Rdata|filename = .*pdf|write_csv.*csv") %>% 
+      str_remove_all(" |\"|\\(|\\)|,") %>% 
+      str_c(collapse = " ") %>% 
+      str_replace_all("load","input: ") %>% 
+      str_replace("write_csv|save.imagefile=|save.image|filename=|file=","~output: ") %>% 
+      str_replace_all("write_csv|save.imagefile=|save.image|filename=|file=","output: ") %>% 
+      str_split("~", simplify = T)
+    
+    tibble(
+      dir       = x %>% str_remove_all("scripts/") %>% str_remove_all("/.*") %>% str_remove("^\\d-"),
+      script    = x %>% str_remove_all(".*/"),
+      raw       = script_text %>% str_squish() %>% str_c(collapse = ", "),
+      n_input   = str_count(script_text[1], "input"),
+      input1    = script_text[1],
+      input2    = input1 %>% str_remove_all("input: ") %>% str_trim(),
+      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br>") %>% ifelse(is.na(.),"",.),
+      n_output  = str_count(script_text[2], "output") %>% ifelse(is.na(.), 0, .),
+      output1   = script_text[2],
+      output2   = output1 %>% str_remove_all("output: ") %>% str_trim(),
+      output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "\n- ") %>%  paste0("- ", .) %>% ifelse(. == "- NA","",.)
+    )
+  }) 
+
+file_list %>% 
+  select(dir,script, input, output) %>% 
+  gt(id = "one", rowname_col = "row", groupname_col = "dir") %>% 
+  fmt_markdown(columns = T) %>% 
+  tab_options(
+    row_group.font.weight = "bold",
+  ) %>% 
+  opt_css(
+    css = "
+    #one .gt_row {
+      vertical-align: top;
+    }
+    "
+  )
+```
+

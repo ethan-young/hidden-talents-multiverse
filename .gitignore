@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+**/.DS_Store
+multiverse-objects/1-multiverse-datasets/*
+multiverse-objects/2-primary-analyses/*
+multiverse-objects/3-secondary-analyses/*
+figures/primary/*
+figures/secondary/set-1/*
+figures/secondary/set-2/*

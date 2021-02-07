@@ -1,0 +1,81 @@
+Variable,Label,Values
+id,Blinded participant ID,
+sample_code,Sample code,"West Jordan Middle School = wjms, Boys and Girls club = bgc"
+interviewer,Interview: Initals of the interviewer who conducted the stress interview,
+site,Interview: Location of the interview,
+classroom,"WJMS: Unique classroom code, combination of class period, teacher, and year",
+sex,Sex assigned at birth,"Male = 1, Female = 2"
+ethnicity,Questionnaire: Self-reported race,
+age,Interview: participant's age,
+has_sibling,"Whether or not the participant has a sibling in this sample, 1 = yes, 0 = no",
+siblings,"WJMS and BGC sibling codes combined into one variable, codes ending with '000' indicate no sibling",
+non_arb_impaired_assent,Interview: Was the participant able to read information at the end of the Assent document?,
+non_arb_impaired,Interview: Interview rating of participant impairment that might have interferred with the assessment,
+non_arb_attention_check,"Questionnaire: Attention Check, Sum of all missed attention items (max 4); higher scores reflect the number of attention items each participant failed",
+non_arb_q_responses,Questionnaire: Total number of all high or all low responses across scales with reverse coded items,
+non_arb_sped_60min,School records: Special education classification for students who spend between 60 - 180 minutes per day receiving SpEd services or are  enrolled in SpEd classes,
+non_arb_distractions,"Exclusion Variable: Coder rated binary variable indicating extreme disruptions using RA notes, 0 = normal or low distraction level, 1 = possible distractions, 2 = extreme distraction",
+arb_sped,School records: Special education classification. Scored as 1 if classified as special ed at any point in the current school year,"Not Special Ed. = 0, Special Ed = 1"
+test_envr_noisy,Interviewer rating: how noisy was the testing environment during the cognitive tasks?,"Not at all = 1, 2 = 2, 3 = 3, Moderately = 4, 5 = 5, 6 = 6, Much more than average = 7"
+test_envr_chaotic,Interviewer rating: how chaotic was the testing environment during the cognitive tasks?,"Not at all = 1, 2 = 2, 3 = 3, Moderately = 4, 5 = 5, 6 = 6, Much more than average = 7"
+test_envr_interrupted,Interviewer rating: how often were you interrupted during the cognitive tasks? (including loudspeaker interruptions),"Not at all = 1, 2 = 2, 3 = 3, Moderately = 4, 5 = 5, 6 = 6, Much more than average = 7"
+test_envr_distracted,Interviewer rating: how often was the participant distracted during the cognitive tasks?,"Not at all = 1, 2 = 2, 3 = 3, Moderately = 4, 5 = 5, 6 = 6, Much more than average = 7"
+test_envr,Interviewer rating: interview: average of the four interviewer rated items regarding the data collection setting,
+csd1,Have you ever felt like saying unkind things to a person?,"Yes = 1, No = 2"
+csd2,Are you always careful about keeping your clothing neat and picking up after yourself?,"Yes = 1, No = 2"
+csd3,Do you sometimes feel like staying home from school even if you are not sick?,"Yes = 1, No = 2"
+csd4,Do you ever say anything that makes somebody else feel bad?,"Yes = 1, No = 2"
+csd5,"Are you always polite, even to people who are not very nice?","Yes = 1, No = 2"
+csd6,"Sometimes, do you do things you've been told not to do?","Yes = 1, No = 2"
+csd7,Do you always listen to your parents or guardians?,"Yes = 1, No = 2"
+csd8,Do you sometimes wish you could just play around instead of having to go to school?,"Yes = 1, No = 2"
+csd9,Have you ever broken a rule?,"Yes = 1, No = 2"
+csd,"Questionnaire: Child Social Desirability, sum of socially desirable answers, higher scores mean more socially desirable responding",
+unp_perceived1,Things were pretty calm and stable in my house.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived2,People moved in and out of my house a lot.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived3,I had a hard time knowing what my parent(s) or other people in my house were going to say or do from day-to-day.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived4,My parent(s) argued or fought a lot with each other or with other people.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived5,My parent(s) changed jobs a lot.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived6,"My parental situation changed a lot (for example, divorce or separation of parents, parents starting new romantic relationships, parents leaving the home).","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+unp_perceived,"Questionnaire: Childhood Unpredictability, average score, higher scores mean higher levels of percieved  childhood unpredictability",
+unp_interview_disrupted,"Interview: Timing of family disruption factor with 4 levels; 0 = no disruption, 1 = late disruption (6-13), 2 = early disruption (1-5), 3 = born into a disrupted family",
+unp_interview_figures,Interview: Number of different parental figures that lived with the mother and/or father (or primary caregivers) in the same home,
+unp_interview_moves,Interview: Number of residential moves involving changes in people,
+vio_neighborhood1,I grew up in a safe neighborhood.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood2,Crime was common in the neighborhood where I grew up.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood3,"In the neighborhood where I grew up, people had plenty of money.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood4,"In the neighborhood where I grew up, physical fights were common.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood5,"In the neighborhood where I grew up, shootings or stabbings occurred.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood6,"In the neighborhood where I grew up, most people felt unsafe walking alone after dark.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood7,"Where I grew up, it was important to be able to defend yourself against physical harm.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+vio_neighborhood,"Questionnaire: Neighborhood Violence Exposure, average score, higher scores mean higher levels of exposure to neighborhood violence",
+vio_fighting1,"Based on your experiences at school and in your neighborhood, how many times did you see or hear someone being beaten up in real life?","0 times = 1, 1 time = 2, 2 or 3 times = 3, 4 or 5 times = 4, 6 or 7 times = 5, 8 or 9 times = 6, 10 or 11 times = 7, 12 or more times = 8"
+vio_fighting2,How many times were you in a physical fight at school or in your neighborhood?,"0 times = 1, 1 time = 2, 2 or 3 times = 3, 4 or 5 times = 4, 6 or 7 times = 5, 8 or 9 times = 6, 10 or 11 times = 7, 12 or more times = 8"
+vio_fighting,"Questionnaire: Exposure to Fighting, average of fighting1 and fighting2, highe scores mean higher levels of exposure and involvement in fighting",
+ses_perceived1,Your family had enough money to afford the kind of home you all needed.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived2,Your family had enough money to afford the kind of clothing you all needed.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived3,Your family had enough money to afford the kind of food that you all needed.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived4,Your family had enough money to afford the kind of medical care that you all needed.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived5,"I felt well-off (rich, wealthy) compared to other kids in my school.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived6,"I felt well-off (rich, wealthy) compared to other kids in my neighborhood.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived7,Your family struggled to make ends meet (get by financially),"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
+ses_perceived,"Questionnaire: Family Resources, average score, higher scores mean higher percieved childhood resources",
+ses_interview_edu,"Interview: parental education level, mean of mother_education and father_education",
+ses_interview_occup,occupational prestige: mean occupational prestige of mother and father's primary census score (higher scores mean more prestige),
+ses_school_freelunch,"Free lunch status (binary variables coded as 0 = no free lunch and 1 = free lunch), wjms_economic_disadvantage was used for wjms data, bgc_free_lunch for Boys and Girls data",
+eco_shifting_correct,Ecological Shifting: Total number of correct responses across all trials,
+eco_shifting_sc,Ecological Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
+abs_shifting_correct,Standard Shifting: Total number of correct responses across all trials,
+abs_shifting_sc,Standard Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
+eco_updating_r1_correct,"Ecological Updating: Round 1, total number correct (correctly reported bills, buses, and faces)",
+eco_updating_r2_correct,"Ecological Updating: Round 2, total number correct (correctly reported bills, buses, and faces)",
+eco_updating_r3_correct,"Ecological Updating: Round 3, total number correct (correctly reported bills, buses, and faces)",
+eco_updating_r4_correct,"Ecological Updating: Round 4, total number correct (correctly reported bills, buses, and faces)",
+eco_updating_r5_correct,"Ecological Updating: Round 5, total number correct (correctly reported bills, buses, and faces)",
+eco_updating,Ecological Updating: Proportion correct for all rounds (total possible correct = 15),
+abs_updating_r1_correct,"Standard Updating: Round 1, total number correct (correctly reported squares, trianlges, and circles)",
+abs_updating_r2_correct,"Standard Updating: Round 2, total number correct (correctly reported squares, trianlges, and circles)",
+abs_updating_r3_correct,"Standard Updating: Round 3, total number correct (correctly reported squares, trianlges, and circles)",
+abs_updating_r4_correct,"Standard Updating: Round 4, total number correct (correctly reported squares, trianlges, and circles)",
+abs_updating_r5_correct,"Standard Updating: Round 5, total number correct (correctly reported squares, trianlges, and circles)",
+abs_updating,Standard Updating: Proportion correct for all rounds (total possible correct = 15),
