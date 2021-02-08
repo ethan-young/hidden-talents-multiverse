@@ -104,7 +104,7 @@ There are four types of R-scripts in this repository, each with a separate folde
 -   `2-primary-analyses/`: Primary analysis scripts
 -   `3-secondary-analyses/`: Secondary analysis scripts
 
-Each script takes an input(s) and produces output(s). The table below provides an overview of the inputs and outputs of each script.
+Each script takes an input(s) and produces output(s). The tables below provides an overview of the inputs and outputs of each script.
 
 ```{r}
 file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = T) %>% 
@@ -126,17 +126,47 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
       n_input   = str_count(script_text[1], "input"),
       input1    = script_text[1],
       input2    = input1 %>% str_remove_all("input: ") %>% str_trim(),
-      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br>") %>% ifelse(is.na(.),"",.),
+      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>%str_c(collapse = "\n- ") %>%  paste0("- ", .) %>% ifelse(. == "- ","",.),
       n_output  = str_count(script_text[2], "output") %>% ifelse(is.na(.), 0, .),
       output1   = script_text[2],
       output2   = output1 %>% str_remove_all("output: ") %>% str_trim(),
       output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "\n- ") %>%  paste0("- ", .) %>% ifelse(. == "- NA","",.)
     )
   }) 
+```
 
+### Data Prep
+
+```{r}
 file_list %>% 
-  select(dir,script, input, output) %>% 
-  gt(id = "one", rowname_col = "row", groupname_col = "dir") %>% 
+  select(dir, script, input, output) %>% 
+  filter(dir == "data-prep") %>% 
+  select(-dir) %>%
+  gt(id = "one", rowname_col = "row") %>% 
   fmt_markdown(columns = T) %>% 
-  gt::as_raw_html()
+  as_raw_html()
+```
+
+### Primary Analyses
+
+```{r}
+file_list %>% 
+  select(dir, script, input, output) %>% 
+  filter(dir == "primary-analyses") %>% 
+  select(-dir) %>% 
+  gt(id = "one", rowname_col = "row") %>% 
+  fmt_markdown(columns = T) %>% 
+  as_raw_html()
+```
+
+### Seconary Analyses
+
+```{r}
+file_list %>% 
+  select(dir, script, input, output) %>% 
+  filter(dir == "secondary-analyses") %>% 
+  select(-dir) %>% 
+  gt(id = "one", rowname_col = "row") %>% 
+  fmt_markdown(columns = T) %>% 
+  as_raw_html()
 ```
