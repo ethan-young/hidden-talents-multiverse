@@ -159,7 +159,7 @@ file_list %>%
   as_raw_html()
 ```
 
-### Seconary Analyses
+### Secondary Analyses
 
 ```{r}
 file_list %>% 
