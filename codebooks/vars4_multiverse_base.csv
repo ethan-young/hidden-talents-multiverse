@@ -1,0 +1,32 @@
+Variable,Label,Values
+id,Blinded participant ID,
+siblings_id,Sibling ID,
+arb_sample,Sample code,"West Jordan Middle School = wjms, Boys and Girls club = bgc"
+arb_attention_check,"Questionnaire: Attention Check, Sum of all missed attention items (max 4); higher scores reflect the number of attention items each participant failed",
+arb_distractions,"Exclusion Variable: Coder rated binary variable indicating extreme disruptions using RA notes, 0 = normal or low distraction level, 1 = possible distractions, 2 = extreme distraction",
+arb_sped,School records: Special education classification. Scored as 1 if classified as special ed at any point in the current school year,"Not Special Ed. = 0, Special Ed = 1"
+arb_csd,"Questionnaire: Child Social Desirability, sum of socially desirable answers, higher scores mean more socially desirable responding",
+arb_eco_shift,Ecological Shifting: Total number of correct responses across all trials,
+arb_abs_shift,Standard Shifting: Total number of correct responses across all trials,
+age,Interview: participant's age,
+test_envr,Interviewer rating: interview: average of the four interviewer rated items regarding the data collection setting,
+unp_perceived,"Questionnaire: Childhood Unpredictability, average score, higher scores mean higher levels of percieved  childhood unpredictability",
+unp_interview,"Unpredictability: interview-based measure of unpredictabilty using parental figures, moves involving new people, and a disrupted family.
+                       Variables were standardized before averageing. Higher scores mean more unpredictability",
+unp_agg,"Unpredictability: composite variable of interview-based (unp_interview) and 
+                       self-report perceived childhood unpredictability (unp_perceived). Variables were standardized before averageing.
+                       Higher scores mean more unpredictability",
+vio_neighborhood,"Questionnaire: Neighborhood Violence Exposure, average score, higher scores mean higher levels of exposure to neighborhood violence",
+vio_fighting,"Questionnaire: Exposure to Fighting, average of fighting1 and fighting2, highe scores mean higher levels of exposure and involvement in fighting",
+vio_agg,"Violence Exposure: Average of the standardized vio_fighting and vio_exposure variables, higher scores mean more violence exposure",
+ses_perceived,"Questionnaire: Family Resources, average score, higher scores mean higher percieved childhood resources",
+ses_interview,"SES: Interview-based SES composite variable of parental education (standardized) and occupational prestige (standardized), 
+                       higher scores indicate higher parental SES (more education and occupational prestige)",
+ses_school,"SES: recoded school provided economic codes for combining with other SES variables, .5 = no school provided assistance, -.5 = school provided assistance",
+ses_agg,"SES: composite variable of perceived SES (ses_perceived), parental SES (ses_interview), and school provided SES (ses_school).
+                       perceived SES and parent SES were standarized prior to aggregating and school SES was coded as .5 and -.5 (to reflect 1/2 SD above and below the mean).
+                       All three variables were then averaged to create the final composite.",
+abs_shifting_sc,Standard Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
+eco_shifting_sc,Ecological Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
+abs_updating,Standard Updating: Proportion correct for all rounds (total possible correct = 15),
+eco_updating,Ecological Updating: Proportion correct for all rounds (total possible correct = 15),
