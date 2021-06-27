@@ -40,6 +40,7 @@ project:
     (where applicable).
 2.  `data/`: data, stored as an `.Rdata` file and `.csv` files.
 <<<<<<< HEAD
+<<<<<<< HEAD
 3.  `manuscript`: a manuscript written in R markdown for submission to a
     journal.
 4.  `multiverse-objects/`: all `.Rdata` files containing objects
@@ -50,10 +51,15 @@ project:
 6.  `supplement/`: a supplemental text (to be submitted with the
     manuscript) documenting all secondary analyses in detail.
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 3.  `figures/`: all figures that are produced by R-scripts
 4.  `multiverse-objects/`: all `.Rdata` files containing objects
     necessary for performing multiverse analyses and storing
     intermediary results
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 
 Below is a simple visualization of the full directory structure.
@@ -72,6 +78,7 @@ Below is a simple visualization of the full directory structure.
     ## │   ├── data1_raw.Rdata
     ## │   └── data2_analysis.Rdata
 <<<<<<< HEAD
+<<<<<<< HEAD
     ## ├── manuscript
     ## │   ├── figure1.pdf
     ## │   ├── manuscript.Rmd
@@ -87,6 +94,8 @@ Below is a simple visualization of the full directory structure.
     ## │   │   └── table3.R
     ## │   └── staged-objects.Rdata
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     ## ├── figures
     ## │   ├── primary
     ## │   │   ├── 0-placeholder.txt
@@ -111,6 +120,9 @@ Below is a simple visualization of the full directory structure.
     ## │           ├── a1-vio-interactions.pdf
     ## │           ├── a1-vio-shifting.pdf
     ## │           └── a1-vio-updating.pdf
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     ## ├── multiverse-objects
     ## │   ├── 1-multiverse-datasets
@@ -136,6 +148,7 @@ Below is a simple visualization of the full directory structure.
     ## │           ├── a1-extracted-effects.Rdata
     ## │           ├── a1-results-expanded-shifting.Rdata
     ## │           └── a1-results-expanded-updating.Rdata
+<<<<<<< HEAD
 <<<<<<< HEAD
     ## ├── scripts
     ## │   ├── 0-functions
@@ -170,6 +183,8 @@ Below is a simple visualization of the full directory structure.
     ##     ├── supplement.Rmd
     ##     └── supplement.pdf
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     ## └── scripts
     ##     ├── 0-functions
     ##     │   └── create_codebook.R
@@ -196,6 +211,9 @@ Below is a simple visualization of the full directory structure.
     ##             ├── a1-analysis-adversity-components.R
     ##             ├── a2-extract-effects.R
     ##             └── a3-create-plots.R
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 
 Each of the top-level folders are explained in more detail below:
@@ -238,6 +256,7 @@ A codebook for these data, including variable labels and value labels
 directory.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Manuscript
 
 This directory contains the manuscript for this project. It was written
@@ -253,6 +272,8 @@ necessary data/objects from the `multiverse-objects/` directory and
 sources the other scripts to produce the objects needed for the
 manuscript.
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 ## Figures
 
 These are all figures that are produced by R-scripts. They are divided
@@ -264,6 +285,9 @@ into the following categories:
 
     -   Set 1
     -   Set 2
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 
 ## Multiverse-objects
@@ -296,7 +320,11 @@ There are four types of R-scripts in this repository, each with a
 separate folder.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 -   `0-functions/`: Custom R-functions written for this project
+=======
+-   `0-functions/`: custom R-functions written for this project
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
 -   `0-functions/`: custom R-functions written for this project
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
@@ -320,6 +348,7 @@ provides an overview of the inputs and outputs of each script.
   </thead>
   <tbody style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <tr><td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>1-data-non-abritrary.R</p>
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
@@ -328,6 +357,8 @@ provides an overview of the inputs and outputs of each script.
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     <tr>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>1-data-non-abritrary.R</p>
 </div></td>
@@ -336,6 +367,9 @@ provides an overview of the inputs and outputs of each script.
 </ul>
 </div></td>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 <li>1-raw.csv</li>
 <li>2-non_arbitrary.csv</li>
@@ -347,6 +381,7 @@ provides an overview of the inputs and outputs of each script.
 <li>vars4_multiverse_base.csv</li>
 <li>data2_analysis.Rdata</li>
 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 </div></td></tr>
     <tr><td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>2-primary-multiverse-datasets.R</p>
@@ -370,6 +405,8 @@ provides an overview of the inputs and outputs of each script.
 </ul>
 </div></td></tr>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 </div></td>
     </tr>
     <tr>
@@ -396,6 +433,9 @@ provides an overview of the inputs and outputs of each script.
 </ul>
 </div></td>
     </tr>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   </tbody>
   
@@ -414,6 +454,7 @@ provides an overview of the inputs and outputs of each script.
     </tr>
   </thead>
   <tbody style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <tr><td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>1-confirmatory.R</p>
 </div></td>
@@ -439,6 +480,8 @@ provides an overview of the inputs and outputs of each script.
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     <tr>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>1-confirmatory.R</p>
 </div></td>
@@ -467,11 +510,15 @@ provides an overview of the inputs and outputs of each script.
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>3-extract-effects.R</p>
 </div></td>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 <li>1-confirmatory-results.Rdata</li>
 <li>2-exploratory-results.Rdata</li>
 </ul>
 </div></td>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>3-extracted-effects.Rdata</li>
@@ -481,6 +528,8 @@ provides an overview of the inputs and outputs of each script.
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>3-extracted-effects.Rdata</li>
 </ul>
@@ -490,11 +539,15 @@ provides an overview of the inputs and outputs of each script.
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>4-bootstrap-setup.R</p>
 </div></td>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 <li>datalist-agg-ivs.Rdata</li>
 <li>3-extracted-effects.Rdata</li>
 </ul>
 </div></td>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>4-bootstrapped-data.Rdata</li>
@@ -504,6 +557,8 @@ provides an overview of the inputs and outputs of each script.
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>4-bootstrapped-data.Rdata</li>
 </ul>
@@ -513,17 +568,23 @@ provides an overview of the inputs and outputs of each script.
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>5-bootstrap-spec-analysis.R</p>
 </div></td>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 <li>datalist-agg-ivs.Rdata</li>
 <li>4-bootstrapped-data.Rdata</li>
 </ul>
 </div></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>5-bootstrapped-effects.Rdata</li>
 </ul>
 </div></td></tr>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>5-bootstrapped-effects.Rdata</li>
 </ul>
@@ -544,6 +605,9 @@ provides an overview of the inputs and outputs of each script.
 </ul>
 </div></td>
     </tr>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   </tbody>
   
@@ -562,6 +626,7 @@ provides an overview of the inputs and outputs of each script.
     </tr>
   </thead>
   <tbody style="border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3;">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <tr><td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>a1-analysis-ses-vio.R</p>
 </div></td>
@@ -618,6 +683,8 @@ provides an overview of the inputs and outputs of each script.
 </div></td>
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     <tr>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>a1-analysis-ses-vio.R</p>
 </div></td>
@@ -709,17 +776,23 @@ provides an overview of the inputs and outputs of each script.
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><p>a2-extract-effects.R</p>
 </div></td>
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 <li>a1-results-expanded-shifting.Rdata</li>
 <li>a1-results-expanded-updating.Rdata</li>
 </ul>
 </div></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>a1-extracted-effects.Rdata</li>
 </ul>
 </div></td></tr>
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       <td style="padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;"><div class='gt_from_md'><ul>
 <li>a1-extracted-effects.Rdata</li>
 </ul>
@@ -745,11 +818,15 @@ provides an overview of the inputs and outputs of each script.
 </ul>
 </div></td>
     </tr>
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   </tbody>
   
   
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ## Supplement
@@ -764,5 +841,7 @@ directory and are named to be self-explanatory. The `rmd-staging.R`
 script reads necessary data/objects from the `multiverse-objects/`
 directory and sources the other scripts to produce the objects needed
 for the supplement.
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1

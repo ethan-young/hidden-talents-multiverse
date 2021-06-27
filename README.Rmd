@@ -34,6 +34,7 @@ The names of each folder are intended to be self-explanatory. There are five top
 1.  `codebooks/`: lists of variable names, labels, and value labels (where applicable).
 2.  `data/`: data, stored as an `.Rdata` file and `.csv` files.
 <<<<<<< HEAD
+<<<<<<< HEAD
 3.  `manuscript`: a manuscript written in R markdown for submission to a journal.
 4.  `multiverse-objects/`: all `.Rdata` files containing objects necessary for performing multiverse analyses and storing intermediary results.
 5.  `scripts/`: R-scripts that read, analyze, and produce all multiverse objects.
@@ -43,12 +44,20 @@ The names of each folder are intended to be self-explanatory. There are five top
 3.  `figures/`: all figures that are produced by R-scripts
 4.  `multiverse-objects/`: all `.Rdata` files containing objects necessary for performing multiverse analyses and storing intermediary results
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
+3.  `figures/`: all figures that are produced by R-scripts
+4.  `multiverse-objects/`: all `.Rdata` files containing objects necessary for performing multiverse analyses and storing intermediary results
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 
 Below is a simple visualization of the full directory structure.
 
 ```{r}
 <<<<<<< HEAD
+<<<<<<< HEAD
 fs::dir_tree(".", regexp = "^README|.Rproj$|log$|tex$|_files|resources", invert = T)
+=======
+fs::dir_tree(".", regexp = "^README|.Rproj$", invert = T)
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
 fs::dir_tree(".", regexp = "^README|.Rproj$", invert = T)
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
@@ -81,10 +90,13 @@ All versions and codebooks are stored in `data/data2_analysis.Rdata`. In additio
 A codebook for these data, including variable labels and value labels (if applicable), can be found in `codebook.csv` at the top level of this directory.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## Manuscript
 
 This directory contains the manuscript for this project. It was written in R Markdown and is 100% reproducible. The `.Rmd` fie contains the written text with all figures, tables, and in-text statistics. All outputs reported in the manuscript were staged prior to compiling into a `.pdf` document and stored in a `.Rdata` file called `staged-objects.Rdata`. The R Markdown document reads these staged files to make the overall document easier to read. The scripts that produce the staged objects are located in the `manuscript/scripts/` directory and are named to be self-explanatory. The `rmd-staging.R` script reads necessary data/objects from the `multiverse-objects/` directory and sources the other scripts to produce the objects needed for the manuscript.
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 ## Figures
 
 These are all figures that are produced by R-scripts. They are divided into the following categories:
@@ -95,6 +107,9 @@ These are all figures that are produced by R-scripts. They are divided into the 
 
     -   Set 1
     -   Set 2
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 
 ## Multiverse-objects
@@ -118,7 +133,11 @@ This folder contains all objects necessary for representing each step. Specifica
 There are four types of R-scripts in this repository, each with a separate folder.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 -   `0-functions/`: Custom R-functions written for this project
+=======
+-   `0-functions/`: custom R-functions written for this project
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
 -   `0-functions/`: custom R-functions written for this project
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
@@ -166,7 +185,11 @@ file_list %>%
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
 <<<<<<< HEAD
+<<<<<<< HEAD
   fmt_markdown(columns = everything()) %>% 
+=======
+  fmt_markdown(columns = T) %>% 
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
   fmt_markdown(columns = T) %>% 
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
@@ -180,9 +203,15 @@ file_list %>%
   select(dir, script, input, output) %>% 
   filter(dir == "primary-analyses") %>% 
 <<<<<<< HEAD
+<<<<<<< HEAD
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
   fmt_markdown(columns = everything()) %>% 
+=======
+  select(-dir) %>% 
+  gt(id = "one", rowname_col = "row") %>% 
+  fmt_markdown(columns = T) %>% 
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
   select(-dir) %>% 
   gt(id = "one", rowname_col = "row") %>% 
@@ -198,6 +227,7 @@ file_list %>%
   select(dir, script, input, output) %>% 
   filter(dir == "secondary-analyses") %>% 
 <<<<<<< HEAD
+<<<<<<< HEAD
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
   fmt_markdown(columns = everything()) %>% 
@@ -208,9 +238,14 @@ file_list %>%
 
 This directory contains the supplement to the manuscript described above. The supplement was produced using the same approach as the manuscript: it was written in R Markdown, is 100% reproducible, and all outputs were staged prior to compiling into a `.pdf`. The staged objects are stored in `supplement/staged-objects.Rdata`. The scripts that produce the staged objects are located in the `supplement/scripts/` directory and are named to be self-explanatory. The `rmd-staging.R` script reads necessary data/objects from the `multiverse-objects/` directory and sources the other scripts to produce the objects needed for the supplement.
 =======
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   select(-dir) %>% 
   gt(id = "one", rowname_col = "row") %>% 
   fmt_markdown(columns = T) %>% 
   as_raw_html()
 ```
+<<<<<<< HEAD
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1

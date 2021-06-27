@@ -38,6 +38,7 @@ secondary_set2_effects <-
       }) %>% 
       rename_with(tolower) %>% 
 <<<<<<< HEAD
+<<<<<<< HEAD
       filter(!str_detect(mod_term, "^sd__")) %>% 
       mutate(
         # Do this to reverse code SES to match low SES to High poverty
@@ -46,6 +47,9 @@ secondary_set2_effects <-
           .fns = ~ifelse(str_detect(iv,"ses"), .x * -1, .x)
         )
       )
+=======
+      filter(!str_detect(mod_term, "^sd__"))
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
       filter(!str_detect(mod_term, "^sd__"))
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
@@ -97,6 +101,7 @@ secondary_set2_effects_points <-
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Simple Slopes -----------------------------------------------------------
 secondary_set2_simple_slopes <- 
   secondary_pmap %>% 
@@ -131,12 +136,17 @@ secondary_set2_simple_slopes <-
 
 =======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 # save data ---------------------------------------------------------------
 save(
   secondary_set2_effects_clean,
   secondary_set2_effects_points,
 <<<<<<< HEAD
+<<<<<<< HEAD
   secondary_set2_simple_slopes,
+=======
+>>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 =======
 >>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   file = "multiverse-objects/3-secondary-analyses/set-2/a1-extracted-effects.Rdata"
