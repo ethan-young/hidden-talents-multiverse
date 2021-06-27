@@ -31,17 +31,11 @@ csd6,"Sometimes, do you do things you've been told not to do?","Yes = 1, No = 2"
 csd7,Do you always listen to your parents or guardians?,"Yes = 1, No = 2"
 csd8,Do you sometimes wish you could just play around instead of having to go to school?,"Yes = 1, No = 2"
 csd9,Have you ever broken a rule?,"Yes = 1, No = 2"
-<<<<<<< HEAD
-<<<<<<< HEAD
 csd10,Do you sometimes feel angry when you don't get your way?,"Yes = 1, No = 2"
 csd11,Do you sometimes feel like making fun of other people?,"Yes = 1, No = 2"
 csd12,Do you always do the right things?,"Yes = 1, No = 2"
 csd13,Are there some times when you don't like to do what your parents tell you?,"Yes = 1, No = 2"
 csd14,Do you sometimes get mad when people don't do what you want them to do?,"Yes = 1, No = 2"
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 csd,"Questionnaire: Child Social Desirability, sum of socially desirable answers, higher scores mean more socially desirable responding",
 unp_perceived1,Things were pretty calm and stable in my house.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
 unp_perceived2,People moved in and out of my house a lot.,"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
@@ -78,16 +72,10 @@ ses_perceived5,"I felt well-off (rich, wealthy) compared to other kids in my sch
 ses_perceived6,"I felt well-off (rich, wealthy) compared to other kids in my neighborhood.","Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
 ses_perceived7,Your family struggled to make ends meet (get by financially),"Never true = 1, Rarely true = 2, Sometimes true = 3, Often true = 4, Very often true = 5"
 ses_perceived,"Questionnaire: Family Resources, average score, higher scores mean higher percieved childhood resources",
-<<<<<<< HEAD
-<<<<<<< HEAD
 ses_school_wjms_fee,School records: Fee waiver status,"No fee waiver = 0, fee waiver = 1"
 ses_school_wjms_hom,School records: Homelessness status,"not homeless = 0, homeless = 1"
 ses_school_wjms_frl,School records: Free lunch status,"no free lunch = 0, free lunch = 1"
 ses_school_wjms_rel,School records: Reduced lunch status,"no reduced-price lunch = 0, reduced-price lunch = 1"
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 ses_interview_edu,"Interview: parental education level, mean of mother_education and father_education",
 ses_interview_occup,occupational prestige: mean occupational prestige of mother and father's primary census score (higher scores mean more prestige),
 ses_school_freelunch,"Free lunch status (binary variables coded as 0 = no free lunch and 1 = free lunch), wjms_economic_disadvantage was used for wjms data, bgc_free_lunch for Boys and Girls data",
@@ -98,22 +86,12 @@ ses_agg,"SES: composite variable of perceived SES (ses_perceived), parental SES 
                        perceived SES and parent SES were standarized prior to aggregating and school SES was coded as .5 and -.5 (to reflect 1/2 SD above and below the mean).
                        All three variables were then averaged to create the final composite.",
 eco_shifting_correct,Ecological Shifting: Total number of correct responses across all trials,
-<<<<<<< HEAD
-<<<<<<< HEAD
 eco_shifting_re_rt,Ecological Shifting: Mean reaction time for all 'repeat' trials (ms),
 eco_shifting_sw_rt,Ecological Shifting: Mean reaction time for all 'switch' trials (ms),
 eco_shifting_sc,Ecological Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
 abs_shifting_correct,Standard Shifting: Total number of correct responses across all trials,
 abs_shifting_re_rt,Standard Shifting: Mean reaction time for all 'repeat' trials (ms),
 abs_shifting_sw_rt,Standard Shifting: Mean reaction time for all 'switch' trials (ms),
-=======
-eco_shifting_sc,Ecological Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
-abs_shifting_correct,Standard Shifting: Total number of correct responses across all trials,
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
-eco_shifting_sc,Ecological Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
-abs_shifting_correct,Standard Shifting: Total number of correct responses across all trials,
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 abs_shifting_sc,Standard Shifting: The difference between the average reaction time for **valid** switch trials and average reaction time for **valid** repeat trials (ms),
 eco_updating_r1_correct,"Ecological Updating: Round 1, total number correct (correctly reported bills, buses, and faces)",
 eco_updating_r2_correct,"Ecological Updating: Round 2, total number correct (correctly reported bills, buses, and faces)",

@@ -39,8 +39,6 @@ primary_effects_data <-
       }) %>% 
       rename_with(tolower) %>% 
       filter(!str_detect(mod_term, "^sd__")) %>% 
-<<<<<<< HEAD
-<<<<<<< HEAD
       mutate(
         # Do this to reverse code SES to match low SES to High poverty
         across(
@@ -48,10 +46,6 @@ primary_effects_data <-
           .fns = ~ifelse(str_detect(mod_term,"ses"), .x * -1, .x)
         )
       ) %>% 
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       group_by(mod_term) %>% 
       mutate(
         spec_rank  = as.numeric(fct_reorder(as_factor(spec_number), mod_std_coefficient)),
@@ -129,8 +123,6 @@ primary_effects_points <-
       select(iv, dv, hypoth, spec_number, mod_sig)
   )
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Simple Slopes -----------------------------------------------------------
 primary_simple_slopes <- 
   primary_pmap %>% 
@@ -162,21 +154,11 @@ primary_simple_slopes <-
       )
   })
 
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
 # save data ---------------------------------------------------------------
 save(
   primary_effects_data,
   primary_effects_medians,
   primary_effects_points,
-<<<<<<< HEAD
-<<<<<<< HEAD
   primary_simple_slopes,
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
   file = "multiverse-objects/2-primary-analyses/3-extracted-effects.Rdata"
 )

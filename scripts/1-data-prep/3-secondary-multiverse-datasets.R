@@ -46,18 +46,12 @@ spec_grid <-
       "shifting",        0,           "(arb_abs_shift/32) > 0 & (arb_eco_shift/32) > 0",       "Include Acc. < 65%",
       "shifting",        1,           "(arb_abs_shift/32) > .65 & (arb_eco_shift/32) > .65",   "Exclude Acc. < 65%",
       "iv",              0,           "unp_agg",                                               "Unp Composite",
-<<<<<<< HEAD
-<<<<<<< HEAD
       "iv",              1,           "unp_interview",                                         "Unp Interview",
       "iv",              2,           "unp_perceived",                                         "Unp Perceived",
-=======
       "iv",              1,           "unp_interview",                                         "Unp Perceived",
       "iv",              2,           "unp_perceived",                                         "Unp Interview",
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
       "iv",              1,           "unp_interview",                                         "Unp Perceived",
       "iv",              2,           "unp_perceived",                                         "Unp Interview",
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
       "iv",              3,           "vio_agg",                                               "Vio Composite",
       "iv",              4,           "vio_neighborhood",                                      "Vio Neighborhood",
       "iv",              5,           "vio_fighting",                                          "Vio Fighting",

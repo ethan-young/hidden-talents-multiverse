@@ -73,15 +73,9 @@ data3_composites <-
     starts_with("non_arb"),
     starts_with("arb"),
     matches("^test_envr"), 
-<<<<<<< HEAD
-<<<<<<< HEAD
     matches("^csd(\\d|\\d\\d|)$"),
-=======
     matches("^csd(\\d|)$"),
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
-=======
     matches("^csd(\\d|)$"),
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
     matches("^unp_perceived"),
     matches("^unp_interview"),
     unp_agg,

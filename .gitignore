@@ -7,7 +7,6 @@
 multiverse-objects/1-multiverse-datasets/*Rdata
 multiverse-objects/2-primary-analyses/*Rdata
 multiverse-objects/3-secondary-analyses/**/*Rdata
-<<<<<<< HEAD
 manuscript/resources/
 manuscript/manuscript_files/
 manuscript/manuscript.log
@@ -16,9 +15,3 @@ manuscript/staged-objects.Rdata
 supplement/supplement.tex
 supplement/supplement_files/
 supplement/staged-objects.Rdata
-figures/primary/*pdf
-figures/secondary/**/*pdf
-=======
-figures/primary/*pdf
-figures/secondary/**/*pdf
->>>>>>> a0940e3bd988ef96e84639d84f581ebe385b1ee1
