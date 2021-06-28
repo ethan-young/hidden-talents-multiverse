@@ -2,7 +2,7 @@ Hidden Talents Multiverse Analysis
 ================
 
 This repository contains data, code, and (some) output for a working
-manuscript by Young, Frankenhuis, and Ellis (in progress).
+manuscript.
 
 ## IMPORTANT!!
 
