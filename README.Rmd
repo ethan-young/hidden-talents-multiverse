@@ -138,8 +138,7 @@ file_list %>%
   filter(dir == "data-prep") %>% 
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything()) %>% 
-  as_raw_html()
+  fmt_markdown(columns = everything()) 
 ```
 
 ### Primary Analyses
@@ -150,8 +149,7 @@ file_list %>%
   filter(dir == "primary-analyses") %>% 
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything()) %>% 
-  as_raw_html()
+  fmt_markdown(columns = everything())
 ```
 
 ### Seconary Analyses
@@ -162,8 +160,7 @@ file_list %>%
   filter(dir == "secondary-analyses") %>% 
   select(-dir) %>%
   gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything()) %>% 
-  as_raw_html()
+  fmt_markdown(columns = everything())
 ```
 
 ## Supplement
