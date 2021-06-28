@@ -1,8 +1,6 @@
 ---
 title: "Hidden Talents Multiverse Analysis"
-output: 
-  md_document:
-    variant: markdown_mmd
+output: github_document
 ---
 
 ```{r setup, include=F}

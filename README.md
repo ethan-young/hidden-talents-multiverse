@@ -1,4 +1,5 @@
-title: Hidden Talents Multiverse Analysis
+Hidden Talents Multiverse Analysis
+================
 
 This repository contains data, code, and (some) output for a working
 manuscript by Young, Frankenhuis, and Ellis (in progress).
@@ -227,32 +228,32 @@ provides an overview of the inputs and outputs of each script.
 
 ### Data Prep
 
-| script                            | input                | output                                                                                                                                                                                                                                                                                 |
-|-----------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-data-non-abritrary.R            | data1_raw.Rdata      | 1-raw.csv`<br>`{=html} 2-non_arbitrary.csv`<br>`{=html} 3-composites.csv`<br>`{=html} 4-multiverse_base.csv`<br>`{=html} vars1_raw.csv`<br>`{=html} vars2_non_arbitrary.csv`<br>`{=html} vars3_composites.csv`<br>`{=html} vars4_multiverse_base.csv`<br>`{=html} data2_analysis.Rdata |
-| 2-primary-multiverse-datasets.R   | data2_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                                                                                 |
-| 3-secondary-multiverse-datasets.R | data2_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                                                                                 |
+| script                            | input                 | output                                                                                                                                                                                                                  |
+|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
+| 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                  |
+| 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                  |
 
 ### Primary Analyses
 
-| script                      | input                                                                 | output                       |
-|-----------------------------|-----------------------------------------------------------------------|------------------------------|
-| 1-confirmatory.R            | datalist-agg-ivs.Rdata                                                | 1-confirmatory-results.Rdata |
-| 2-exploratory.R             | datalist-agg-ivs.Rdata                                                | 2-exploratory-results.Rdata  |
-| 3-extract-effects.R         | 1-confirmatory-results.Rdata`<br>`{=html} 2-exploratory-results.Rdata | 3-extracted-effects.Rdata    |
-| 4-bootstrap-setup.R         | datalist-agg-ivs.Rdata`<br>`{=html} 3-extracted-effects.Rdata         | 4-bootstrapped-data.Rdata    |
-| 5-bootstrap-spec-analysis.R | datalist-agg-ivs.Rdata`<br>`{=html} 4-bootstrapped-data.Rdata         | 5-bootstrapped-effects.Rdata |
+| script                      | input                                                        | output                       |
+|-----------------------------|--------------------------------------------------------------|------------------------------|
+| 1-confirmatory.R            | datalist-agg-ivs.Rdata                                       | 1-confirmatory-results.Rdata |
+| 2-exploratory.R             | datalist-agg-ivs.Rdata                                       | 2-exploratory-results.Rdata  |
+| 3-extract-effects.R         | 1-confirmatory-results.Rdata<br> 2-exploratory-results.Rdata | 3-extracted-effects.Rdata    |
+| 4-bootstrap-setup.R         | datalist-agg-ivs.Rdata<br> 3-extracted-effects.Rdata         | 4-bootstrapped-data.Rdata    |
+| 5-bootstrap-spec-analysis.R | datalist-agg-ivs.Rdata<br> 4-bootstrapped-data.Rdata         | 5-bootstrapped-effects.Rdata |
 
 ### Seconary Analyses
 
-| script                             | input                                                                              | output                                                                             |
-|------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| a1-analysis-ses-vio.R              | datalist-agg-ivs.Rdata                                                             | a1-results-ses-vio.Rdata                                                           |
-| a2-extract-effects.R               | a1-results-ses-vio.Rdata                                                           | a2-extracted-effects.Rdata                                                         |
-| b1-analysis-ses-components.R       | datalist-agg-ivs.Rdata                                                             | b1-results-ses-components.Rdata                                                    |
-| b2-extract-effects.R               | b1-results-ses-components.Rdata                                                    | b2-extracted-effects.Rdata                                                         |
-| a1-analysis-adversity-components.R | datalist-all-ivs.Rdata                                                             | a1-results-expanded-shifting.Rdata`<br>`{=html} a1-results-expanded-updating.Rdata |
-| a2-extract-effects.R               | a1-results-expanded-shifting.Rdata`<br>`{=html} a1-results-expanded-updating.Rdata | a1-extracted-effects.Rdata                                                         |
+| script                             | input                                                                     | output                                                                    |
+|------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| a1-analysis-ses-vio.R              | datalist-agg-ivs.Rdata                                                    | a1-results-ses-vio.Rdata                                                  |
+| a2-extract-effects.R               | a1-results-ses-vio.Rdata                                                  | a2-extracted-effects.Rdata                                                |
+| b1-analysis-ses-components.R       | datalist-agg-ivs.Rdata                                                    | b1-results-ses-components.Rdata                                           |
+| b2-extract-effects.R               | b1-results-ses-components.Rdata                                           | b2-extracted-effects.Rdata                                                |
+| a1-analysis-adversity-components.R | datalist-all-ivs.Rdata                                                    | a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata |
+| a2-extract-effects.R               | a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata | a1-extracted-effects.Rdata                                                |
 
 ## Supplement
 
