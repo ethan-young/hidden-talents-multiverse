@@ -257,6 +257,38 @@ provides an overview of the inputs and outputs of each script.
 </tbody>
 </table>
 
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>script</th>
+<th>input</th>
+<th>output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1-data-non-abritrary.R</td>
+<td>data1_raw.Rdata</td>
+<td>1-raw.csv<br> 2-non_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse_base.csv<br> vars1_raw.csv<br> vars2_non_arbitrary.csv<br> vars3_composites.csv<br> vars4_multiverse_base.csv<br> data2_analysis.Rdata</td>
+</tr>
+<tr class="even">
+<td>2-primary-multiverse-datasets.R</td>
+<td>data2_analysis.Rdata</td>
+<td>datalist-agg-ivs.Rdata</td>
+</tr>
+<tr class="odd">
+<td>3-secondary-multiverse-datasets.R</td>
+<td>data2_analysis.Rdata</td>
+<td>datalist-all-ivs.Rdata</td>
+</tr>
+</tbody>
+</table>
+
 ### Primary Analyses
 
 <table>

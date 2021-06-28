@@ -152,6 +152,12 @@ cat(
 )
 ```
 
+|script|input|output|
+|------|-----|------|
+|1-data-non-abritrary.R|data1_raw.Rdata|1-raw.csv<br> 2-non_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse_base.csv<br> vars1_raw.csv<br> vars2_non_arbitrary.csv<br> vars3_composites.csv<br> vars4_multiverse_base.csv<br> data2_analysis.Rdata|
+|2-primary-multiverse-datasets.R|data2_analysis.Rdata|datalist-agg-ivs.Rdata|
+|3-secondary-multiverse-datasets.R|data2_analysis.Rdata|datalist-all-ivs.Rdata|
+
 ### Primary Analyses
 
 ```{r, results='asis'}
