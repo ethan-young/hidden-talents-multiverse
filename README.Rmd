@@ -137,7 +137,7 @@ file_list %>%
   select(dir, script, input, output) %>% 
   filter(dir == "data-prep") %>% 
   select(-dir) %>% 
-  knitr::kable(format = "pipe")
+  knitr::kable(format = "simple")
 ```
 
 ### Primary Analyses
@@ -147,7 +147,7 @@ file_list %>%
   select(dir, script, input, output) %>% 
   filter(dir == "primary-analyses") %>% 
   select(-dir) %>% 
-  knitr::kable(format = "pipe")
+  knitr::kable(format = "simple")
 ```
 
 ### Seconary Analyses
@@ -157,7 +157,7 @@ file_list %>%
   select(dir, script, input, output) %>% 
   filter(dir == "secondary-analyses") %>% 
   select(-dir) %>% 
-  knitr::kable(format = "pipe")
+  knitr::kable(format = "simple")
 ```
 
 ## Supplement
