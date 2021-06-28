@@ -1,6 +1,3 @@
-Hidden Talents Multiverse Analysis
-================
-
 This repository contains data, code, and (some) output for a working
 manuscript by Young, Frankenhuis, and Ellis (in progress).
 
@@ -228,32 +225,130 @@ provides an overview of the inputs and outputs of each script.
 
 ### Data Prep
 
-| script                            | input                 | output                                                                                                                                                                                                                  |
-|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
-| 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                  |
-| 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                  |
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>script</th>
+<th>input</th>
+<th>output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1-data-non-abritrary.R</td>
+<td>data1_raw.Rdata</td>
+<td>1-raw.csv<br> 2-non_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse_base.csv<br> vars1_raw.csv<br> vars2_non_arbitrary.csv<br> vars3_composites.csv<br> vars4_multiverse_base.csv<br> data2_analysis.Rdata</td>
+</tr>
+<tr class="even">
+<td>2-primary-multiverse-datasets.R</td>
+<td>data2_analysis.Rdata</td>
+<td>datalist-agg-ivs.Rdata</td>
+</tr>
+<tr class="odd">
+<td>3-secondary-multiverse-datasets.R</td>
+<td>data2_analysis.Rdata</td>
+<td>datalist-all-ivs.Rdata</td>
+</tr>
+</tbody>
+</table>
 
 ### Primary Analyses
 
-| script                      | input                                                        | output                       |
-|-----------------------------|--------------------------------------------------------------|------------------------------|
-| 1-confirmatory.R            | datalist-agg-ivs.Rdata                                       | 1-confirmatory-results.Rdata |
-| 2-exploratory.R             | datalist-agg-ivs.Rdata                                       | 2-exploratory-results.Rdata  |
-| 3-extract-effects.R         | 1-confirmatory-results.Rdata<br> 2-exploratory-results.Rdata | 3-extracted-effects.Rdata    |
-| 4-bootstrap-setup.R         | datalist-agg-ivs.Rdata<br> 3-extracted-effects.Rdata         | 4-bootstrapped-data.Rdata    |
-| 5-bootstrap-spec-analysis.R | datalist-agg-ivs.Rdata<br> 4-bootstrapped-data.Rdata         | 5-bootstrapped-effects.Rdata |
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>script</th>
+<th>input</th>
+<th>output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1-confirmatory.R</td>
+<td>datalist-agg-ivs.Rdata</td>
+<td>1-confirmatory-results.Rdata</td>
+</tr>
+<tr class="even">
+<td>2-exploratory.R</td>
+<td>datalist-agg-ivs.Rdata</td>
+<td>2-exploratory-results.Rdata</td>
+</tr>
+<tr class="odd">
+<td>3-extract-effects.R</td>
+<td>1-confirmatory-results.Rdata<br> 2-exploratory-results.Rdata</td>
+<td>3-extracted-effects.Rdata</td>
+</tr>
+<tr class="even">
+<td>4-bootstrap-setup.R</td>
+<td>datalist-agg-ivs.Rdata<br> 3-extracted-effects.Rdata</td>
+<td>4-bootstrapped-data.Rdata</td>
+</tr>
+<tr class="odd">
+<td>5-bootstrap-spec-analysis.R</td>
+<td>datalist-agg-ivs.Rdata<br> 4-bootstrapped-data.Rdata</td>
+<td>5-bootstrapped-effects.Rdata</td>
+</tr>
+</tbody>
+</table>
 
 ### Seconary Analyses
 
-| script                             | input                                                                     | output                                                                    |
-|------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| a1-analysis-ses-vio.R              | datalist-agg-ivs.Rdata                                                    | a1-results-ses-vio.Rdata                                                  |
-| a2-extract-effects.R               | a1-results-ses-vio.Rdata                                                  | a2-extracted-effects.Rdata                                                |
-| b1-analysis-ses-components.R       | datalist-agg-ivs.Rdata                                                    | b1-results-ses-components.Rdata                                           |
-| b2-extract-effects.R               | b1-results-ses-components.Rdata                                           | b2-extracted-effects.Rdata                                                |
-| a1-analysis-adversity-components.R | datalist-all-ivs.Rdata                                                    | a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata |
-| a2-extract-effects.R               | a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata | a1-extracted-effects.Rdata                                                |
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 29%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>script</th>
+<th>input</th>
+<th>output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a1-analysis-ses-vio.R</td>
+<td>datalist-agg-ivs.Rdata</td>
+<td>a1-results-ses-vio.Rdata</td>
+</tr>
+<tr class="even">
+<td>a2-extract-effects.R</td>
+<td>a1-results-ses-vio.Rdata</td>
+<td>a2-extracted-effects.Rdata</td>
+</tr>
+<tr class="odd">
+<td>b1-analysis-ses-components.R</td>
+<td>datalist-agg-ivs.Rdata</td>
+<td>b1-results-ses-components.Rdata</td>
+</tr>
+<tr class="even">
+<td>b2-extract-effects.R</td>
+<td>b1-results-ses-components.Rdata</td>
+<td>b2-extracted-effects.Rdata</td>
+</tr>
+<tr class="odd">
+<td>a1-analysis-adversity-components.R</td>
+<td>datalist-all-ivs.Rdata</td>
+<td>a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata</td>
+</tr>
+<tr class="even">
+<td>a2-extract-effects.R</td>
+<td>a1-results-expanded-shifting.Rdata<br> a1-results-expanded-updating.Rdata</td>
+<td>a1-extracted-effects.Rdata</td>
+</tr>
+</tbody>
+</table>
 
 ## Supplement
 

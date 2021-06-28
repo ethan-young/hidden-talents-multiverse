@@ -1,6 +1,6 @@
 ---
 title: "Hidden Talents Multiverse Analysis"
-output: github_document
+output: md_document
 ---
 
 ```{r setup, include=F}
@@ -148,7 +148,7 @@ cat(
     data_prep,
     "|{script}|{input}|{output}|"
   ),
-  sep = "\n "
+  sep = "\n"
 )
 ```
 
