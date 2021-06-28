@@ -228,9 +228,11 @@ provides an overview of the inputs and outputs of each script.
 
 ### Data Prep
 
-| script                            | input                 | output                                                                                                                                                                                                                  |
-|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
+|script| input| output|
+
+|------|------|-------|
+
+| 1-data-non-abritrary.R| data1\_raw.Rdata | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
 | 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                  |
 | 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                  |
 
