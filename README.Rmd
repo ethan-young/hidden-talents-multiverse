@@ -121,11 +121,11 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
       n_input   = str_count(script_text[1], "input"),
       input1    = script_text[1],
       input2    = input1 %>% str_remove_all("input: ") %>% str_trim(),
-      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>%str_c(collapse = "\n- ") %>%  paste0("- ", .) %>% ifelse(. == "- ","",.),
+      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br> ") %>% ifelse(. == " ","",.),
       n_output  = str_count(script_text[2], "output") %>% ifelse(is.na(.), 0, .),
       output1   = script_text[2],
       output2   = output1 %>% str_remove_all("output: ") %>% str_trim(),
-      output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "\n- ") %>%  paste0("- ", .) %>% ifelse(. == "- NA","",.)
+      output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br> ") %>%  ifelse(. == "NA","",.)
     )
   }) 
 ```
@@ -136,9 +136,8 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
 file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "data-prep") %>% 
-  select(-dir) %>%
-  gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything()) 
+  select(-dir) %>% 
+  knitr::kable(format = "pipe")
 ```
 
 ### Primary Analyses
@@ -147,9 +146,8 @@ file_list %>%
 file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "primary-analyses") %>% 
-  select(-dir) %>%
-  gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything())
+  select(-dir) %>% 
+  knitr::kable(format = "pipe")
 ```
 
 ### Seconary Analyses
@@ -158,9 +156,8 @@ file_list %>%
 file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "secondary-analyses") %>% 
-  select(-dir) %>%
-  gt(id = "one", rowname_col = "row") %>% 
-  fmt_markdown(columns = everything())
+  select(-dir) %>% 
+  knitr::kable(format = "pipe")
 ```
 
 ## Supplement
