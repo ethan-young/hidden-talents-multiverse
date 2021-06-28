@@ -132,32 +132,62 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
 
 ### Data Prep
 
-```{r}
-file_list %>% 
+```{r, results='asis'}
+data_prep <- 
+  file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "data-prep") %>% 
-  select(-dir) %>% 
-  knitr::kable(format = "simple")
+  select(-dir) 
+
+cat(
+  "|script|input|output|",
+  "|------|-----|------|",
+  glue::glue_data(
+    data_prep,
+    "|{script}|{input}|{output}|"
+  ),
+  sep = "\n"
+)
 ```
 
 ### Primary Analyses
 
-```{r}
-file_list %>% 
+```{r, results='asis'}
+primary_analyses <- 
+  file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "primary-analyses") %>% 
-  select(-dir) %>% 
-  knitr::kable(format = "simple")
+  select(-dir)
+
+cat(
+  "|script|input|output|",
+  "|------|-----|------|",
+  glue::glue_data(
+    primary_analyses,
+    "|{script}|{input}|{output}|"
+  ),
+  sep = "\n"
+)
 ```
 
 ### Seconary Analyses
 
-```{r}
-file_list %>% 
+```{r, results='asis'}
+secondary_analyses <- 
+  file_list %>% 
   select(dir, script, input, output) %>% 
   filter(dir == "secondary-analyses") %>% 
-  select(-dir) %>% 
-  knitr::kable(format = "simple")
+  select(-dir)
+
+cat(
+  "|script|input|output|",
+  "|------|-----|------|",
+  glue::glue_data(
+    secondary_analyses,
+    "|{script}|{input}|{output}|"
+  ),
+  sep = "\n"
+)
 ```
 
 ## Supplement

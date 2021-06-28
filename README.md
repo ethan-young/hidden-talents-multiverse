@@ -229,7 +229,7 @@ provides an overview of the inputs and outputs of each script.
 ### Data Prep
 
 | script                            | input                 | output                                                                                                                                                                                          |
-|:----------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv, 2-non\_arbitrary.csv, 3-composites.csv, 4-multiverse\_base.csv, vars1\_raw.csv, vars2\_non\_arbitrary.csv, vars3\_composites.csv, vars4\_multiverse\_base.csv, data2\_analysis.Rdata |
 | 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                          |
 | 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                          |
@@ -237,7 +237,7 @@ provides an overview of the inputs and outputs of each script.
 ### Primary Analyses
 
 | script                      | input                                                     | output                       |
-|:----------------------------|:----------------------------------------------------------|:-----------------------------|
+|-----------------------------|-----------------------------------------------------------|------------------------------|
 | 1-confirmatory.R            | datalist-agg-ivs.Rdata                                    | 1-confirmatory-results.Rdata |
 | 2-exploratory.R             | datalist-agg-ivs.Rdata                                    | 2-exploratory-results.Rdata  |
 | 3-extract-effects.R         | 1-confirmatory-results.Rdata, 2-exploratory-results.Rdata | 3-extracted-effects.Rdata    |
@@ -247,7 +247,7 @@ provides an overview of the inputs and outputs of each script.
 ### Seconary Analyses
 
 | script                             | input                                                                  | output                                                                 |
-|:-----------------------------------|:-----------------------------------------------------------------------|:-----------------------------------------------------------------------|
+|------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------|
 | a1-analysis-ses-vio.R              | datalist-agg-ivs.Rdata                                                 | a1-results-ses-vio.Rdata                                               |
 | a2-extract-effects.R               | a1-results-ses-vio.Rdata                                               | a2-extracted-effects.Rdata                                             |
 | b1-analysis-ses-components.R       | datalist-agg-ivs.Rdata                                                 | b1-results-ses-components.Rdata                                        |
