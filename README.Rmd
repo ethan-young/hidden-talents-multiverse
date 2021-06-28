@@ -1,6 +1,6 @@
 ---
 title: "Hidden Talents Multiverse Analysis"
-output: github_document
+output: md_document
 ---
 
 ```{r setup, include=F}
@@ -8,6 +8,8 @@ knitr::opts_chunk$set(echo = F, message = F, warning = F)
 
 library(tidyverse)
 library(gt)
+library(glue)
+library(htmltools)
 ```
 
 This repository contains data, code, and (some) output for a working manuscript by Young, Frankenhuis, and Ellis (in progress).
@@ -121,11 +123,11 @@ file_list <- list.files("scripts", pattern = ".R$", full.names = T, recursive = 
       n_input   = str_count(script_text[1], "input"),
       input1    = script_text[1],
       input2    = input1 %>% str_remove_all("input: ") %>% str_trim(),
-      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = ", ") %>% ifelse(. == ", ","",.),
+      input     = input2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br> ") %>% ifelse(. == "<br> ","",.),
       n_output  = str_count(script_text[2], "output") %>% ifelse(is.na(.), 0, .),
       output1   = script_text[2],
       output2   = output1 %>% str_remove_all("output: ") %>% str_trim(),
-      output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = ", ") %>%  ifelse(. == ", NA","",.)
+      output    = output2 %>% str_split(" ", simplify = T) %>% str_remove_all(".*/") %>% str_c(collapse = "<br> ") %>%  ifelse(. == "<br> NA","",.)
     )
   }) 
 ```
@@ -146,7 +148,7 @@ cat(
     data_prep,
     "|{script}|{input}|{output}|"
   ),
-  sep = "\n"
+  sep = "\n "
 )
 ```
 
