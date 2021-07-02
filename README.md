@@ -14,7 +14,7 @@ This ensures that scripts can reproduce and save output to the correct
 directory (without having to manually add them).
 
 To reproduce this repository, see [How to reproduce this
-respository](#repro) below.
+respository](#how-to-reproduce-this-repository) below.
 
 ## Preregistration
 
@@ -42,8 +42,8 @@ project:
 1.  `codebooks/`: lists of variable names, labels, and value labels
     (where applicable).
 2.  `data/`: data, stored as an `.Rdata` file and `.csv` files.
-3.  `manuscript`: a manuscript written in R markdown for submission to a
-    journal.
+3.  `manuscript/`: a manuscript written in R markdown for submission to
+    a journal.
 4.  `multiverse-objects/`: all `.Rdata` files containing objects
     necessary for performing multiverse analyses and storing
     intermediary results.
@@ -207,13 +207,13 @@ There are four steps to doing the multiverse:
 This folder contains all objects necessary for representing each step.
 Specifically:
 
--   `1-multiverse-datasets`: multiverse data sets with each data
+-   `1-multiverse-datasets/`: multiverse data sets with each data
     universe stored in a list. There is one list used for the composites
     and one list used for all components of each IV.
--   `2-primary-analyses`: contain the multiverse of full results and
+-   `2-primary-analyses/`: contain the multiverse of full results and
     extracted effects for the primary confirmatory and exploratory
     results
--   `3-secondary-analyses`: contain the same objects as above for each
+-   `3-secondary-analyses/`: contain the same objects as above for each
     set of secondary analyses.
 
 ## Data Processing Scripts
@@ -230,12 +230,6 @@ Each script takes an input(s) and produces output(s). The tables below
 provides an overview of the inputs and outputs of each script.
 
 ### Data Prep
-
-| script                            | input                 | output                                                                                                                                                                                                                  |
-|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
-| 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                  |
-| 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                  |
 
 | script                            | input                 | output                                                                                                                                                                                                                  |
 |-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -298,13 +292,13 @@ should be ran:
 1.  `2-primary-analyses/1-confirmatory.R`: conducts unpredictability and
     violence multiverse analyses for attention-shifting and working
     memory updating.
-2.  `2-primary-analyses/1-exploratory.R`: conducts poverty multiverse
+2.  `2-primary-analyses/2-exploratory.R`: conducts poverty multiverse
     analyses for attention-shifting and working memory updating.
-3.  `2-primary-analyses/1-extract-effects.R`: extracts and compiles
+3.  `2-primary-analyses/3-extract-effects.R`: extracts and compiles
     multiverse data for plotting and reporting.
-4.  `2-primary-analyses/1-bootstrap-setup.R`: sets up bootstrap samples
+4.  `2-primary-analyses/4-bootstrap-setup.R`: sets up bootstrap samples
     for bootstrapping technique .
-5.  `2-primary-analyses/1-bootstrap-spec-analysis.R`: runs specification
+5.  `2-primary-analyses/5-bootstrap-spec-analysis.R`: runs specification
     analyses over all bootstrapped samples to obtain overall *p*-values.
 
 ### 3. Secondary Analyses
@@ -315,7 +309,7 @@ should be ran:
         Exposure Interactions with Task-Version” in the manuscript
     2.  `3-secondary-analyses/set-1/a2-extract-effects.R`: extracts and
         compiles multiverse data for plotting and reporting for the
-        analysis labeld “Comparing Violence and Poverty Exposure
+        analysis labeled “Comparing Violence and Poverty Exposure
         Interactions with Task-Version” in the manuscript.
     3.  `3-secondary-analyses/set-1/b1-analysis-ses-components.R`:
         conducts an analysis of the components of poverty, which is
