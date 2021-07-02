@@ -13,6 +13,9 @@ files named `0-placeholder.txt` have been added to output directories.
 This ensures that scripts can reproduce and save output to the correct
 directory (without having to manually add them).
 
+To reproduce this repository, see [How to reproduce this
+respository](#repro) below.
+
 ## Preregistration
 
 Details about the participants, methods, procedures, and analysis plans
@@ -273,3 +276,87 @@ directory and are named to be self-explanatory. The `rmd-staging.R`
 script reads necessary data/objects from the `multiverse-objects/`
 directory and sources the other scripts to produce the objects needed
 for the supplement.
+
+## How to reproduce this repository
+
+To reproduce this repository, download all files locally. You can do
+this by cloning the repository or downloading the files directly as a
+.zip file. Because many of the objects are very large (i.e., those
+containing multiverse data and results), they are not included in this
+repository. However, the scripts will create all necessary outputs to
+reproduce all data and files. Below is the exact order these scripts
+should be ran:
+
+### 1. Data Preparation
+
+1.  `1-data-prep/1-data-non-arbitrary.R`
+2.  `1-data-prep/2-primary-multiverse-datasets.R`
+3.  `1-data-prep/3-sedoncary-multiverse-datasets.R`
+
+### 2. Primary Analyses
+
+1.  `2-primary-analyses/1-confirmatory.R`: conducts unpredictability and
+    violence multiverse analyses for attention-shifting and working
+    memory updating.
+2.  `2-primary-analyses/1-exploratory.R`: conducts poverty multiverse
+    analyses for attention-shifting and working memory updating.
+3.  `2-primary-analyses/1-extract-effects.R`: extracts and compiles
+    multiverse data for plotting and reporting.
+4.  `2-primary-analyses/1-bootstrap-setup.R`: sets up bootstrap samples
+    for bootstrapping technique .
+5.  `2-primary-analyses/1-bootstrap-spec-analysis.R`: runs specification
+    analyses over all bootstrapped samples to obtain overall *p*-values.
+
+### 3. Secondary Analyses
+
+1.  Set 1
+    1.  `3-secondary-analyses/set-1/a1-analysis-ses-vio.R`: conducts
+        secondary analysis labeled “Comparing Violence and Poverty
+        Exposure Interactions with Task-Version” in the manuscript
+    2.  `3-secondary-analyses/set-1/a2-extract-effects.R`: extracts and
+        compiles multiverse data for plotting and reporting for the
+        analysis labeld “Comparing Violence and Poverty Exposure
+        Interactions with Task-Version” in the manuscript.
+    3.  `3-secondary-analyses/set-1/b1-analysis-ses-components.R`:
+        conducts an analysis of the components of poverty, which is
+        redundant with the secondary analysis labeled “Exploring
+        Components of Adversity Dimensions”, which is conducted below in
+        Set 2.
+    4.  `3-secondary-analyses/set-1/b2-extract-effects.R`: extracts
+        effects for poverty component multiverse analyses.
+2.  Set 2
+    1.  `3-secondary-analyses/set-2/a1-analysis-adversity-components.R`:
+        conducts an analysis of the components of all adversity
+        composites for the secondary analysis labeled “Exploring
+        Components of Adversity Dimensions” (this is an expansion of the
+        above secondary analysis for the components of poverty in Set 1)
+    2.  `3-secondary-analyses/set-2/a2-extract-effects.R`: extracts
+        effects for adversity component multiverse analyses.
+
+### 4. Manuscript
+
+1.  `manuscript/scripts/rmd-staging.R`: loads all necessary data and
+    multiverse objects, computes all necessary in-text statistics, and
+    sources the following scripts to create tables and figures for the
+    manuscript stored in `manuscirpt/staged-objects.Rdata`:
+    -   `table1.R`
+    -   `table2.R`
+    -   `table3.R`
+    -   `figure2-3.R`
+2.  `manuscript/manuscript.Rmd`: loads `manuscript/staged-objects.Rdata`
+    and knits together the written manuscript and all statistics,
+    tables, and figures computed by the staging script above.
+
+### 5. Supplement
+
+1.  `supplement/scripts/rmd-staging.R`: loads all necessary data and
+    multiverse objects and sources the following scripts to create
+    tables and figures for the supplement stored in
+    `supplement/staged-objects.Rdata`:
+    -   `1-covariates.R`
+    -   `2-secondary1.R`
+    -   `3-secondary2.R`
+    -   `4-tables.R`
+2.  `supplement/supplement.Rmd`: loads `supplement/staged-objects.Rdata`
+    and knits together the written supplement and all tables and figures
+    computed by the staging script above.
