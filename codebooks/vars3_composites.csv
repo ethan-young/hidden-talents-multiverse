@@ -6,9 +6,10 @@ site,Interview: Location of the interview,
 classroom,"WJMS: Unique classroom code, combination of class period, teacher, and year",
 siblings_id,Sibling ID,
 has_sibling,"Whether or not the participant has a sibling in this sample, 1 = yes, 0 = no",
-siblings_n,The number of siblings each participant has who also participated in this study ,
+siblings_n,The number of siblings each participant has who also participated in this study,
 sex,Sex assigned at birth,"Male = 1, Female = 2"
-ethnicity,Questionnaire: Self-reported race,
+race,Self-reported racial identity,"Asian = 1, Native American = 2, African American = 3, White = 4, Hispanic = 5, Pacific Islander = 6, Multiple = 7"
+hispanic,Questionnaire: Whether or not participant is of hispanic descent,"Yes, I am Hispanic / Latino. = 1, No, I am not Hispanic / Latino. = 2"
 age,Interview: participant's age,
 non_arb_impaired_assent,Interview: Was the participant able to read information at the end of the Assent document?,
 non_arb_impaired,Interview: Interview rating of participant impairment that might have interferred with the assessment,

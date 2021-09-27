@@ -91,7 +91,11 @@ txt1_sam <-
         n    = data %>% pull(ses_school_freelunch) %>% sum(na.rm=T),
         bgc  = data %>% filter(sample_code == "bgc") %>% pull(ses_school_freelunch) %>% sum(na.rm=T),
         wjms = data %>% filter(sample_code == "wjms") %>% pull(ses_school_freelunch) %>% sum(na.rm=T)
-      ) 
+      ),
+      race = list(
+        non_white = data %>% filter(race != 4) %>% nrow(),
+        hispanic  = data %>% filter(hispanic == 1) %>% nrow()
+      )
     )
   }) 
 

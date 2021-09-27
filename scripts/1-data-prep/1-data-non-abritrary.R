@@ -48,7 +48,16 @@ data2_non_arbitrary <-
   select(-siblings) %>% 
   var_labels(
     siblings_id = "Sibling ID",
-    siblings_n  = "The number of siblings each participant has who also participated in this study "
+    siblings_n  = "The number of siblings each participant has who also participated in this study"
+  ) %>% 
+  sjlabelled::val_labels(
+    race = c("Asian" = 1,
+             "Native American" = 2,
+             "African American" = 3,
+             "White" = 4,
+             "Hispanic" = 5,
+             "Pacific Islander" = 6,
+             "Multiple" = 7)
   )
 
 # Create Overall Composites -----------------------------------------------
@@ -69,7 +78,7 @@ data3_composites <-
   select(
     id, sample_code, interviewer, site, classroom, 
     siblings_id, has_sibling, siblings_n,
-    sex, ethnicity, age, 
+    sex, race, hispanic, age, 
     starts_with("non_arb"),
     starts_with("arb"),
     matches("^test_envr"), 

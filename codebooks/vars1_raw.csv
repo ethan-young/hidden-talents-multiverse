@@ -5,7 +5,8 @@ interviewer,Interview: Initals of the interviewer who conducted the stress inter
 site,Interview: Location of the interview,
 classroom,"WJMS: Unique classroom code, combination of class period, teacher, and year",
 sex,Sex assigned at birth,"Male = 1, Female = 2"
-ethnicity,Questionnaire: Self-reported race,
+race,Self-reported racial identity,
+hispanic,Questionnaire: Whether or not participant is of hispanic descent,"Yes, I am Hispanic / Latino. = 1, No, I am not Hispanic / Latino. = 2"
 age,Interview: participant's age,
 has_sibling,"Whether or not the participant has a sibling in this sample, 1 = yes, 0 = no",
 siblings,"WJMS and BGC sibling codes combined into one variable, codes ending with '000' indicate no sibling",
