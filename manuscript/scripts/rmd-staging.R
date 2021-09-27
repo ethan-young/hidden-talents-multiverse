@@ -38,6 +38,7 @@ my_limits <- c(1,70)
 
 # Objects -----------------------------------------------------------------
 load("multiverse-objects/1-multiverse-datasets/datalist-agg-ivs.Rdata")
+load("data/data1_raw.Rdata")
 load("data/data2_analysis.Rdata")
 load("multiverse-objects/2-primary-analyses/3-extracted-effects.Rdata")
 load("multiverse-objects/2-primary-analyses/5-bootstrapped-effects.Rdata")
@@ -343,6 +344,7 @@ secondary2_medians <-
 
 # Save the entire image ---------------------------------------------------
 save(
+  data1_raw,
   data2_non_arbitrary,
   data3_composites,
   multi_data_list,
