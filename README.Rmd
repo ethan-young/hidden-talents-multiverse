@@ -174,7 +174,7 @@ cat(
 )
 ```
 
-### Seconary Analyses
+### Secondary Analyses
 
 ```{r, results='asis'}
 secondary_analyses <- 
@@ -206,7 +206,7 @@ To reproduce this repository, download all files locally. You can do this by clo
 
 1. `1-data-prep/1-data-non-arbitrary.R`
 2. `1-data-prep/2-primary-multiverse-datasets.R`
-3. `1-data-prep/3-sedoncary-multiverse-datasets.R`
+3. `1-data-prep/3-secondary-multiverse-datasets.R`
 
 ### 2.  Primary Analyses
 

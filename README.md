@@ -68,10 +68,14 @@ Below is a simple visualization of the full directory structure.
     ## │   ├── data1_raw.Rdata
     ## │   └── data2_analysis.Rdata
     ## ├── manuscript
+    ## │   ├── apa.csl
     ## │   ├── figure1.pdf
     ## │   ├── manuscript.Rmd
     ## │   ├── manuscript.pdf
+    ## │   ├── manuscript_docx.Rmd
+    ## │   ├── manuscript_docx.docx
     ## │   ├── nature.csl
+    ## │   ├── reference-doc.docx
     ## │   ├── references.bib
     ## │   ├── scripts
     ## │   │   ├── 0-corr_table.R
@@ -128,7 +132,9 @@ Below is a simple visualization of the full directory structure.
     ## │           ├── a1-analysis-adversity-components.R
     ## │           └── a2-extract-effects.R
     ## └── supplement
+    ##     ├── reference-doc.docx
     ##     ├── scripts
+    ##     │   ├── 0-corr_table.R
     ##     │   ├── 1-covariates.R
     ##     │   ├── 2-secondary1.R
     ##     │   ├── 3-secondary2.R
@@ -136,7 +142,9 @@ Below is a simple visualization of the full directory structure.
     ##     │   └── rmd-staging.R
     ##     ├── staged-objects.Rdata
     ##     ├── supplement.Rmd
-    ##     └── supplement.pdf
+    ##     ├── supplement.pdf
+    ##     ├── supplement_docx.Rmd
+    ##     └── supplement_docx.docx
 
 Each of the top-level folders are explained in more detail below:
 
@@ -231,11 +239,11 @@ provides an overview of the inputs and outputs of each script.
 
 ### Data Prep
 
-| script                            | input                 | output                                                                                                                                                                                                                  |
-|-----------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1-data-non-abritrary.R            | data1\_raw.Rdata      | 1-raw.csv<br> 2-non\_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse\_base.csv<br> vars1\_raw.csv<br> vars2\_non\_arbitrary.csv<br> vars3\_composites.csv<br> vars4\_multiverse\_base.csv<br> data2\_analysis.Rdata |
-| 2-primary-multiverse-datasets.R   | data2\_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                                  |
-| 3-secondary-multiverse-datasets.R | data2\_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                                  |
+| script                            | input                | output                                                                                                                                                                                                         |
+|-----------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1-data-non-abritrary.R            | data1_raw.Rdata      | 1-raw.csv<br> 2-non_arbitrary.csv<br> 3-composites.csv<br> 4-multiverse_base.csv<br> vars1_raw.csv<br> vars2_non_arbitrary.csv<br> vars3_composites.csv<br> vars4_multiverse_base.csv<br> data2_analysis.Rdata |
+| 2-primary-multiverse-datasets.R   | data2_analysis.Rdata | datalist-agg-ivs.Rdata                                                                                                                                                                                         |
+| 3-secondary-multiverse-datasets.R | data2_analysis.Rdata | datalist-all-ivs.Rdata                                                                                                                                                                                         |
 
 ### Primary Analyses
 
@@ -247,7 +255,7 @@ provides an overview of the inputs and outputs of each script.
 | 4-bootstrap-setup.R         | datalist-agg-ivs.Rdata<br> 3-extracted-effects.Rdata         | 4-bootstrapped-data.Rdata    |
 | 5-bootstrap-spec-analysis.R | datalist-agg-ivs.Rdata<br> 4-bootstrapped-data.Rdata         | 5-bootstrapped-effects.Rdata |
 
-### Seconary Analyses
+### Secondary Analyses
 
 | script                             | input                                                                     | output                                                                    |
 |------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -285,7 +293,7 @@ should be ran:
 
 1.  `1-data-prep/1-data-non-arbitrary.R`
 2.  `1-data-prep/2-primary-multiverse-datasets.R`
-3.  `1-data-prep/3-sedoncary-multiverse-datasets.R`
+3.  `1-data-prep/3-secondary-multiverse-datasets.R`
 
 ### 2. Primary Analyses
 
