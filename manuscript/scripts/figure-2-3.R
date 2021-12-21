@@ -290,12 +290,15 @@ spec_curves <-
     if(dv_which == "Attention-Shifting"){
       int_plots <- 
         int_plots +
-        ylab("Switch Cost (ms)\n")
+        scale_y_reverse(n.breaks = 5) +
+        ylab("Switch Cost (ms)\n") +
+        theme(legend.position = c(.25,.8))
     }
     
     if(dv_which == "Working Memory Updating"){
       int_plots <- 
         int_plots +
+        scale_y_continuous(breaks = seq(69, 77, 2)) +
         ylab("% correct\n")
     }
     
@@ -313,7 +316,7 @@ fig2 <-
   ggdraw() +
   draw_plot(
     plot_grid(
-      spec_curves[[1]]$interactions,
+      spec_curves[[1]]$interactions ,
       spec_curves[[1]]$p_curve,
       spec_curves[[1]]$eff_curve,
       spec_curves[[1]]$sample_sizes,
@@ -324,6 +327,7 @@ fig2 <-
       axis  = "lr",
       rel_heights = c(.25,.15,.2,.1,.3)
     ) +
+      draw_plot_label(c("(faster)","(slower)"), x = 0.075, y = c(.95, .78), size = 8, vjust = 1, hjust = 0, fontface = "italic") +
       draw_plot_label(c("a","b","c","d","e"), x = 1, y = c(.95, .75, .6, .4, .3), size = 10, vjust = 1, hjust = 1), 
     x = 0, y = 0, width = 1, height = .95
   ) + 
@@ -344,6 +348,7 @@ fig3 <-
       axis  = "lr",
       rel_heights = c(.25,.15,.2,.1,.3)
     ) +
+      draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.11, y = c(.95, .785), size = 8, vjust = 1, hjust = 1, fontface = "italic") +
       draw_plot_label(c("a","b","c","d","e"), x = 1, y = c(.95, .75, .6, .4, .3), size = 10, vjust = 1, hjust = 1), 
     x = 0, y = 0, width = 1, height = .95
   ) + 

@@ -3,6 +3,7 @@ library(tidyverse)
 library(cowplot)
 library(see)
 library(gt)
+library(psych)
 
 # ggplot2 theme -----------------------------------------------------------
 theme_set(
@@ -34,11 +35,15 @@ my_alphas <- c(.5, 1)
 my_limits <- c(1,70)
 
 # Multiverse Objects ----
+load("multiverse-objects/1-multiverse-datasets/datalist-agg-ivs.Rdata")
+load("data/data1_raw.Rdata")
+load("data/data2_analysis.Rdata")
 load("multiverse-objects/2-primary-analyses/3-extracted-effects.Rdata")
 load("multiverse-objects/3-secondary-analyses/set-2/a1-extracted-effects.Rdata")
 load("multiverse-objects/3-secondary-analyses/set-1/a2-extracted-effects.Rdata")
 
 # Make plots and tables ----
+source("supplement/scripts/0-corr_table.R")
 source("supplement/scripts/1-covariates.R")
 source("supplement/scripts/2-secondary1.R")
 source("supplement/scripts/3-secondary2.R")
