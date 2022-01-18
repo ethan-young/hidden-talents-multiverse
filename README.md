@@ -1,8 +1,10 @@
-Hidden Talents Multiverse Analysis
+Hidden Talents in Context: Multiverse analysis repository
 ================
 
-This repository contains data, code, and (some) output for a working
-manuscript.
+This repository contains data, code, and (some) output for a manuscript
+entitled “Hidden talents in context: Cognitive performance with abstract
+versus ecological stimuli among adversity-exposed youth” submitted to
+and under review at *Child Development*.
 
 ## IMPORTANT!!
 
@@ -71,9 +73,7 @@ Below is a simple visualization of the full directory structure.
     ## │   ├── apa.csl
     ## │   ├── figure1.pdf
     ## │   ├── manuscript.Rmd
-    ## │   ├── manuscript.pdf
-    ## │   ├── manuscript_docx.Rmd
-    ## │   ├── manuscript_docx.docx
+    ## │   ├── manuscript.docx
     ## │   ├── nature.csl
     ## │   ├── reference-doc.docx
     ## │   ├── references.bib
@@ -139,12 +139,11 @@ Below is a simple visualization of the full directory structure.
     ##     │   ├── 2-secondary1.R
     ##     │   ├── 3-secondary2.R
     ##     │   ├── 4-tables.R
+    ##     │   ├── 5-tables-r1.R
     ##     │   └── rmd-staging.R
     ##     ├── staged-objects.Rdata
     ##     ├── supplement.Rmd
-    ##     ├── supplement.pdf
-    ##     ├── supplement_docx.Rmd
-    ##     └── supplement_docx.docx
+    ##     └── supplement.docx
 
 Each of the top-level folders are explained in more detail below:
 
@@ -191,7 +190,7 @@ This directory contains the manuscript for this project. It was written
 in R Markdown and is 100% reproducible. The `.Rmd` fie contains the
 written text with all figures, tables, and in-text statistics. All
 outputs reported in the manuscript were staged prior to compiling into a
-`.pdf` document and stored in a `.Rdata` file called
+`.docx` document and stored in a `.Rdata` file called
 `staged-objects.Rdata`. The R Markdown document reads these staged files
 to make the overall document easier to read. The scripts that produce
 the staged objects are located in the `manuscript/scripts/` directory
@@ -271,9 +270,9 @@ provides an overview of the inputs and outputs of each script.
 This directory contains the supplement to the manuscript described
 above. The supplement was produced using the same approach as the
 manuscript: it was written in R Markdown, is 100% reproducible, and all
-outputs were staged prior to compiling into a `.pdf`. The staged objects
-are stored in `supplement/staged-objects.Rdata`. The scripts that
-produce the staged objects are located in the `supplement/scripts/`
+outputs were staged prior to compiling into a `.docx`. The staged
+objects are stored in `supplement/staged-objects.Rdata`. The scripts
+that produce the staged objects are located in the `supplement/scripts/`
 directory and are named to be self-explanatory. The `rmd-staging.R`
 script reads necessary data/objects from the `multiverse-objects/`
 directory and sources the other scripts to produce the objects needed
@@ -359,6 +358,7 @@ should be ran:
     -   `2-secondary1.R`
     -   `3-secondary2.R`
     -   `4-tables.R`
+    -   `5-tables-r1.R`
 2.  `supplement/supplement.Rmd`: loads `supplement/staged-objects.Rdata`
     and knits together the written supplement and all tables and figures
     computed by the staging script above.

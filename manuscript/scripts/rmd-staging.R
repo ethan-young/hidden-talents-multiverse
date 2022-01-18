@@ -13,7 +13,7 @@ theme_set(
     theme(
       axis.line.y       = element_line(),
       axis.text.y       = element_text(size = rel(.75)),
-      axis.title.y      = element_text(size = rel(1), margin = margin(1,0,0,0,"lines")),
+      axis.title.y      = element_text(size = rel(.80), margin = margin(1,0,0,0,"lines")),
       axis.ticks.y      = element_line(),
       axis.line.x       = element_blank(),
       axis.text.x       = element_blank(),

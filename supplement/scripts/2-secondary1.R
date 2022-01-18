@@ -251,21 +251,28 @@ spec_curves2 <-
       if(dv_which == "Attention-Shifting"){
         int_plots <- 
           int_plots +
-          ylab("Switch Cost (ms)\n")
+          scale_y_reverse(n.breaks = 5) +
+          ylab("Switch Cost (ms)\n") +
+          theme(legend.position = c(.25,.8))
       }
       
       if(dv_which == "Working Memory Updating"){
         int_plots <- 
           int_plots +
+          scale_y_continuous(breaks = seq(69, 77, 2)) +
           ylab("% correct\n")
       }
       
-      if(y == "SES"){
+      if(y == "SES" & dv_which == "Attention-Shifting"){
         int_plots <- 
           int_plots +
-          theme(
-            legend.position = c(.2,.2)
-          )
+            theme(legend.position = c(.2,.8))
+      }
+      
+      if(y == "SES" & dv_which == "Working Memory Updating"){
+        int_plots <- 
+          int_plots +
+            theme(legend.position = c(.2,.2))
       }
       
       list(
@@ -291,7 +298,8 @@ unp_shifting <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 unp_updating <- 
   plot_grid(
@@ -305,7 +313,8 @@ unp_updating <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 # Violence ----------------------------------------------------------------
 vio_shifting <- 
@@ -320,7 +329,8 @@ vio_shifting <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 vio_updating <- 
   plot_grid(
@@ -334,7 +344,8 @@ vio_updating <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 # SES  --------------------------------------------------------------------
 ses_shifting <- 
@@ -349,7 +360,8 @@ ses_shifting <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 ses_updating <- 
   plot_grid(
@@ -363,4 +375,5 @@ ses_updating <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")

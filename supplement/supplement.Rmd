@@ -1,34 +1,79 @@
 ---
 title: "Supplementary Material"
-subtitle: "*Can real-world stimuli improve cognitive performance for children living in adversity?*"
+subtitle: "*Hidden Talents in Context: Cognitive performance with abstract versus ecological stimuli among adversity-exposed youth*"
 output:
-   bookdown::pdf_document2:
-    latex_engine: xelatex
-    number_sections: false
-    lof: yes
-    toc: false
-    extra_dependencies: ["booktabs","caption","longtable","float"]
-    keep_tex: true
-geometry: margin=.5in
-mainfont: Times
-fontsize: 11pt
-urlcolor: blue
-header-includes:
-- \usepackage{siunitx}
+  officedown::rdocx_document:
+    reference_docx: reference-doc.docx
+    page_size:
+      width: 8.5
+      height: 11
+      orient: "portrait"
+    page_margins:
+      bottom: .5
+      top: .5
+      right: .25
+      left: .25
+      header: 0
+      footer: 0
+      gutter: 0
+    plots:
+      align: center
+      style: Normal
+      caption:
+        style: Image Caption
+        pre: 'SI Figure '
+        sep: '. '
+    tables:
+      style: Table
+      layout: autofit
+      width: 1.0
+      caption:
+        style: Caption
+        pre: 'SI Table '
+        sep: '. '
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.align = 'center', fig.pos = "H", fig.show = 'asis')
-
+# load libraries
 library(tidyverse)
-library(gt)
+library(officer)
+library(officedown)
+library(flextable)
 
+# set up chunk options
+knitr::opts_chunk$set(
+  echo = F,
+  fig.align = "center",
+  fig.pos = "!t", 
+  fig.show = "asis",
+  fig.width = 8, 
+  fig.height = 7.5,
+  dpi = 600,
+  out.extra = "",
+  message = F,
+  tab.topcaption = T,
+  warning = F
+)
+
+# set up flextable for tables
+set_flextable_defaults(
+  font.family = "Times", 
+  font.size = 10,
+  font.color = "black",
+  line_spacing = 1,
+  padding.bottom = 1, 
+  padding.top = 1,
+  padding.left = 1,
+  padding.right = 1
+)
+
+# load all data and objects
 load("staged-objects.Rdata")
 ```
 
 # Overview
 
-This document contains two parts. First, we report our full multiverse primary analyses, including covariates (e.g., age and distractions during cognitive testing). Second, we provide visualizations for both of our secondary, exploratory analyses. The first set were focused on exploring the components of adversity dimensions. The second focuses on comparing violence $\times$ task version interaction with poverty $\times$ task version interaction. 
+This document contains three parts. First, we report our full multiverse primary analyses, including covariates (e.g., age and distractions during cognitive testing). Second, we provide visualizations for both of our secondary, exploratory analyses. The first set were focused on exploring the components of adversity dimensions. The second focuses on comparing violence $\times$ task version interaction with poverty $\times$ task version interaction. Third, we report descriptive statistics and bivariate correlations among all indices of adversity (unpredictability, violence, and poverty exposure).
 
 Below are links to each of these sections:
 
@@ -36,31 +81,37 @@ Below are links to each of these sections:
 
 - [SI Table 1](#tab1) (Median Effects)
 - *Attention Shifting*
-  - [SI Figure 1](#fig1) (Unpredictability)
-  - [SI Figure 2](#fig2) (Violence Exposure)
-  - [SI Figure 3](#fig3) (Poverty Exposure)
+    - [SI Figure 1](#fig1) (Unpredictability)
+    - [SI Figure 2](#fig2) (Violence Exposure)
+    - [SI Figure 3](#fig3) (Poverty Exposure)
 - *Working Memory Updating*
-  - [SI Figure 4](#fig4) (Unpredictability)
-  - [SI Figure 5](#fig5) (Violence Exposure)
-  - [SI Figure 6](#fig6) (Poverty Exposure)
+    - [SI Figure 4](#fig4) (Unpredictability)
+    - [SI Figure 5](#fig5) (Violence Exposure)
+    - [SI Figure 6](#fig6) (Poverty Exposure)
 
 **[Secondary Analyses](#sec2)**
 
 - *[Exploring Components of Adversity Dimensions](#sec2a)*
-  - [SI Table 2](#tab2) (Median Effects)
-  - [SI Table 3](#tab3) (Median Simple Effects)
-  - *Attention Shifting*
+    - [SI Table 2](#tab2) (Median Effects)
+    - [SI Table 3](#tab3) (Median Simple Effects)
+- *Attention Shifting*
     - [SI Figure 7](#fig7) (Unpredictability)
     - [SI Figure 8](#fig8) (Violence Exposure)
     - [SI Figure 9](#fig9) (poverty)
-  - *Working Memory Updating*
+- *Working Memory Updating*
     - [SI Figure 10](#fig10) (Unpredictability)
     - [SI Figure 11](#fig11) (Violence Exposure)
     - [SI Figure 12](#fig12) (Poverty Exposure)
 - *[Comparing Violence and Poverty Exposure](#sec2b)*
-  - [SI Table 4](#tab4) (Median Effects)
-  - [SI Table 5](#tab5) (Median Simple Effects)
-  - [SI Figure 13](#fig13) (Poverty vs Violence)
+    - [SI Table 4](#tab4) (Median Effects)
+    - [SI Table 5](#tab5) (Median Simple Effects)
+    - [SI Figure 13](#fig13) (Poverty vs Violence)
+
+**[Descriptive Statistics for all Adversity Indices](#sec3)**
+
+- [SI Table 6](#tab6) (Unpredictability)
+- [SI Table 7](#tab7) (Violence Exposure)
+- [SI Table 8](#tab8) (Poverty)
 
 \pagebreak
 
@@ -70,77 +121,106 @@ We report multiverse plots for all terms in each of our primary analyses. In bri
 
 For a table of all results:
 
- - [SI Table 1](#tab1) (Median Effects)
+- [SI Table 1](#tab1) (Median Effects)
 
 For attention shifting plots:
 
- - [SI Figure 1](#fig1) (Unpredictability)
- - [SI Figure 2](#fig2) (Violence Exposure)
- - [SI Figure 3](#fig3) (Poverty Exposure)
+- [SI Figure 1](#fig1) (Unpredictability)
+- [SI Figure 2](#fig2) (Violence Exposure)
+- [SI Figure 3](#fig3) (Poverty Exposure)
 
 For working memory updating plots:
 
- - [SI Figure 4](#fig4) (Unpredictability)
- - [SI Figure 5](#fig5) (Violence Exposure)
- - [SI Figure 6](#fig6) (Poverty Exposure)
+- [SI Figure 4](#fig4) (Unpredictability)
+- [SI Figure 5](#fig5) (Violence Exposure)
+- [SI Figure 6](#fig6) (Poverty Exposure)
 
 \pagebreak
 
-### SI Table 1. Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for all terms predicting attention shifting. {#tab1}
+### Median Effect Sizes {#tab1}
 
-```{r sitables1, results='asis'}
-si_table.01.1 %>% 
-  as_latex() %>% 
-  as.character() %>% 
-  str_replace_all("\\\\textbackslash Beta", "$\\\\beta$") %>% 
-  cat()
+```{r sitables1, tab.id = "sitables1", tab.cap = "Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for all terms predicting attention shifting."}
+si_table.01.1$`_data` %>% 
+  add_column(.after = 6,"empty1" = "") %>% 
+  add_row(.before = 1, "mod_term_label" = "Unpredictability") %>% 
+  add_row(.after = 6, "mod_term_label" = "Violence") %>% 
+  add_row(.after = 12, "mod_term_label" = "Poverty") %>%
+  select(-iv) %>% 
+  flextable() %>% 
+  merge_h_range(i = 1, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 7, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 12, j1 = 1, j2 = 10) %>% 
+  bold(i = c(1,7,13), j = 1) %>% 
+  padding(i = c(2:6, 8:12, 14:18), j = 1, padding.left = 10) %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(
+    iv = "", mod_term_label = "Term", 
+    empty1 = "", 
+    ci_shifting = "95% CI", 
+    ci_updating = "95% CI"
+    ) %>% 
+  add_header_row(
+    values = c(" ", "Attention Shifting", " ", "Working Memory Updating"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2,7), as_paragraph(as_i("N")), part = "header") %>% 
+  compose(i = 2, j = c(3,8), as_paragraph("\U1D6FD"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 18, border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 \pagebreak
 
-### SI Figure 1. Unpredictability and Attention Shifting specification plot with all covariates. {#fig1}
+### Unpredictability and Attention Shifting specification plot with all covariates. {#fig1}
 
-```{r sifig1, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig1, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 shifting_unp
 ```
 
 \pagebreak
 
-### SI Figure 2. Violence exposure and Attention Shifting specification plot with all covariates. {#fig2}
+### Violence exposure and Attention Shifting specification plot with all covariates. {#fig2}
 
-```{r sifig2, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig2, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 shifting_vio
 ```
 
 \pagebreak
 
-### SI Figure 3. Poverty and Attention Shifting specification plot with all covariates. {#fig3}
+### Poverty and Attention Shifting specification plot with all covariates. {#fig3}
 
-```{r sifig3, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig3, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 shifting_ses
 ```
 
 \pagebreak
 
-### SI Figure 4. Unpredictability and working memory updating specification plot with all covariates. {#fig4}
+### Unpredictability and working memory updating specification plot with all covariates. {#fig4}
 
-```{r sifig4, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig4, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 updating_unp
 ```
 
 \pagebreak
 
-### SI Figure 5. Violence exposure and working memory updating specification plot with all covariates. {#fig5}
+### Violence exposure and working memory updating specification plot with all covariates. {#fig5}
 
-```{r sifig5, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 updating_vio
 ```
 
 \pagebreak
 
-### SI Figure 6. Poverty and working memory updating specification plot with all covariates. {#fig6}
+### Poverty and working memory updating specification plot with all covariates. {#fig6}
 
-```{r sifig6, fig.height=10, fig.width=8.5, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term."}
+```{r sifig6, fig.cap="P-curves, effect size curves, sample sizes, and specification grids for each model term. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 updating_ses
 ```
 
@@ -158,93 +238,149 @@ We ran an expanded multiverse analysis to explore the effects of each component 
 
 For this expanded multiverse approach, we retained all original data processing decisions and added an adversity component as an additional decision. For environmental unpredictability, we analyzed  both unpredictability components and the composite (composite analyses are redundant with primary analyses but were retained for comparison purposes), which resulted in 192 analyses (64 original $\times$ three versions of unpredictability). The same approach was applied to violence exposure (3 violence exposure variables, 192 analyses) and poverty exposure (4 poverty variables, 256 analyses).
 
-For tables of all median effects and simple effects:
+**For tables of all median effects and simple effects:**
 
- - [SI Table 2](#tab2) (Median Effects)
- - [SI Table 3](#tab3) (Simple Effects)
+- [SI Table 2](#tab2) (Median Effects)
+- [SI Table 3](#tab3) (Simple Effects)
 
-For attention shifting plots:
+**For attention shifting plots:**
 
- - [SI Figure 7](#fig7) (Unpredictability)
- - [SI Figure 8](#fig8) (Violence Exposure)
- - [SI Figure 9](#fig9) (Poverty Exposure)
+- [SI Figure 7](#fig7) (Unpredictability)
+- [SI Figure 8](#fig8) (Violence Exposure)
+- [SI Figure 9](#fig9) (Poverty Exposure)
 
-For working memory updating plots:
+**For working memory updating plots:**
 
- - [SI Figure 10](#fig10) (Unpredictability)
- - [SI Figure 11](#fig11) (Violence Exposure)
- - [SI Figure 12](#fig12) (Poverty Exposure)
+- [SI Figure 10](#fig10) (Unpredictability)
+- [SI Figure 11](#fig11) (Violence Exposure)
+- [SI Figure 12](#fig12) (Poverty Exposure)
 
 \pagebreak
 
-### SI Table 2. Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for main effects of adversity components and interactions with task version for attention shifting and working memory updating.{#tab2}
+### Median Effect Sizes {#tab2}
 
-```{r sitables2, results='asis'}
-si_table.02.0 %>% 
-  as_latex() %>% 
-  as.character() %>% 
-  str_replace_all("\\\\textbackslash Beta", "$\\\\beta$") %>% 
-  str_replace_all("\\\\\\$\\\\textbackslash times\\\\\\$", "$\\\\times$") %>% 
-  cat()
+```{r sitables2, tab.id = "sitables2", tab.cap = "Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for main effects of adversity components and interactions with task version for attention shifting and working memory updating."}
+si_table.02.0$`_data` %>% 
+  mutate(mod_term_label = str_replace(mod_term_label,"\\$\\\\times\\$","x")) %>% 
+  add_column(.after = 6,"empty1" = "") %>% 
+  add_row(.before = 1, "mod_term_label" = "Unpredictability") %>% 
+  add_row(.after = 7, "mod_term_label" = "Violence") %>% 
+  add_row(.after = 14, "mod_term_label" = "Poverty") %>%
+  select(-iv) %>% 
+  flextable() %>% 
+  merge_h_range(i = 1, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 8, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 15, j1 = 1, j2 = 10) %>% 
+  bold(i = c(1,8,15), j = 1) %>% 
+  padding(i = c(2:7, 9:14, 16:23), j = 1, padding.left = 10) %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(
+    iv = "", mod_term_label = " ", 
+    empty1 = "", 
+    ci_shifting = "95% CI", 
+    ci_updating = "95% CI"
+  ) %>% 
+  add_header_row(
+    values = c(" ", "Attention Shifting", " ", "Working Memory Updating"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2,7), as_paragraph(as_i("N")), part = "header") %>% 
+  compose(i = 2, j = c(3,8), as_paragraph("\U1D6FD"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  align(i = 2, j = 1, align = "left", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 23, border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 \pagebreak
 
-### SI Table 3. Median simple slopes (unstandardized) and percent significant for adversity component interactions with task version for attention shifting and working memory updating. {#tab3}
+### Median Simple Effects {#tab3}
 
-```{r sitables3, results='asis'}
-si_table.03.0 %>% 
-  as_latex() %>% 
-  as.character() %>% 
-  str_replace_all("\\\\textbackslash Beta", "$\\\\beta$") %>% 
-  cat()
+```{r sitables3, tab.id = "sitables3", tab.cap = " Median simple slopes (unstandardized) and percent significant for adversity component interactions with task version for attention shifting and working memory updating."}
+si_table.03.0$`_data` %>% 
+  add_column(.after = 6,"empty1" = "") %>% 
+  add_row(.before = 1, "iv" = "Attention Shifting") %>% 
+  add_row(.after = 11, "iv" = "Working Memory Updating") %>%
+  select(-dv) %>% 
+  flextable() %>% 
+  merge_h_range(i = 1, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 12, j1 = 1, j2 = 10) %>% 
+  bold(i = c(1,12), j = 1) %>% 
+  padding(i = c(2:11, 13:22), j = 1, padding.left = 10) %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(iv = "", empty1 = "") %>% 
+  add_header_row(
+    values = c(" ", "Task Version", " ", "Adversity Exposure"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2), as_paragraph(as_i("b "), "(abstract)"), part = "header") %>% 
+  compose(i = 2, j = c(4), as_paragraph(as_i("b "), "(ecological)"), part = "header") %>% 
+  compose(i = 2, j = c(7), as_paragraph(as_i("b "), "(low)"), part = "header") %>% 
+  compose(i = 2, j = c(9), as_paragraph(as_i("b "), "(high)"), part = "header") %>% 
+  compose(i = 2, j = c(3,8), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = c(11,22), border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  fontsize(size = 11, part = "body") %>% 
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 \pagebreak
 
-### SI Figure 7. Unpredictability components and attention shifting multiverse results. {#fig7}
+### Unpredictability components and attention shifting multiverse results. {#fig7}
 
-```{r sifig7, fig.width=8, fig.height=7.5, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids task version by unpredictability components."}
+```{r sifig7, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids task version by unpredictability components."}
 unp_shifting
 ```
 
 \pagebreak
 
-### SI Figure 8. Violence exposure components and attention shifting multiverse results. {#fig8}
+### Violence exposure components and attention shifting multiverse results. {#fig8}
 
-```{r sifig8, fig.height=7.5, fig.width=8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence exposure component interactions"}
+```{r sifig8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence exposure component interactions. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 vio_shifting
 ```
 
 \pagebreak
 
-### SI Figure 9. Poverty components and attention shifting multiverse results. {#fig9}
+### Poverty components and attention shifting multiverse results. {#fig9}
 
-```{r sifig9, fig.height=7.5, fig.width=8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by Poverty component interactions"}
+```{r sifig9, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by Poverty component interactions. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 ses_shifting
 ```
 
 \pagebreak
 
-### SI Figure 10. Unpredictability components and working memory updating multiverse results. {#fig10}
+### Unpredictability components and working memory updating multiverse results. {#fig10}
 
-```{r sifig10, fig.height=7.5, fig.width=8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by unpredictability component interactions"}
+```{r sifig10, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by unpredictability component interactions. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 unp_updating
 ```
 
 \pagebreak
 
-### SI Figure 11. Violence exposure components and working memory updating multiverse results. {#fig11}
+### Violence exposure components and working memory updating multiverse results. {#fig11}
 
-```{r sifig11, fig.height=7.5, fig.width=8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence exposure component interactions"}
+```{r sifig11, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence exposure component interactions. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 vio_updating
 ```
 
 \pagebreak
 
-### SI Figure 12. Poverty components and working memory updating multiverse results. {#fig12}
+### Poverty components and working memory updating multiverse results. {#fig12}
 
-```{r sifig12, fig.height=7.5, fig.width=8, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by Poverty component interactions"}
+```{r sifig12, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by Poverty component interactions. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 ses_updating
 ```
 
@@ -262,32 +398,128 @@ For results see:
 
 \pagebreak
 
-### SI Table 4. Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for multiverse analyses comparing Poverty $\times$ task version and violence $\times$ task version interactions.{#tab4}
+### Median Effects {#tab4}
 
-
-```{r sitables4, results='asis'}
-si_table.04.0 %>% 
-  as_latex() %>% 
-  as.character() %>% 
-  str_replace_all("\\\\textbackslash Beta", "$\\\\beta$") %>% 
-  str_replace_all("\\\\\\$\\\\textbackslash times\\\\\\$", "$\\\\times$") %>% 
-  cat()
+```{r sitables4, tab.id = "sitables4", tab.cap = "Median effect sizes, 95% confidence intervals, percent significant, and sample sizes for multiverse analyses comparing Poverty by task version and violence by task version interactions."}
+si_table.04.0$`_data` %>% 
+  mutate(mod_term_label = str_replace(mod_term_label,"\\$\\\\times\\$","x")) %>% 
+  flextable() %>% 
+  set_header_labels(
+    iv = "", mod_term_label = " ", 
+    empty1 = "", 
+    ci = "95% CI"
+  ) %>% 
+  compose(i = 1, j = c(2), as_paragraph("\U1D6FD"), part = "header") %>% 
+  compose(i = 1, j = c(4), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  compose(i = 1, j = c(5), as_paragraph("median ", as_i("N")), part = "header") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 5
+  ) %>% 
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
-### SI Table 5. Median simple slopes (unstandardized) and percent significant for multiverse analyses comparing Poverty $\times$ task version and violence $\times$ task version interactions. {#tab5}
+### Median Simple Effects {#tab5}
 
-```{r sitables5, results='asis'}
-si_table.05.0 %>%
-  as_latex() %>%
-  as.character() %>%
-  str_replace_all("\\\\textbackslash Beta", "$\\\\beta$") %>%
-  cat()
+```{r sitables5, tab.id = "sitables5", tab.cap = "Median simple slopes (unstandardized) and percent significant for multiverse analyses comparing Poverty by task version and violence by task version interactions."}
+si_table.05.0$`_data` %>% 
+  add_column(.after = 5,"empty1" = "") %>% 
+  flextable() %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(iv = "", empty1 = "") %>% 
+  add_header_row(
+    values = c(" ", "Task Version", " ", "Adversity Exposure"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2), as_paragraph(as_i("b "), "(abstract)"), part = "header") %>% 
+  compose(i = 2, j = c(4), as_paragraph(as_i("b "), "(ecological)"), part = "header") %>% 
+  compose(i = 2, j = c(7), as_paragraph(as_i("b "), "(low)"), part = "header") %>% 
+  compose(i = 2, j = c(9), as_paragraph(as_i("b "), "(high)"), part = "header") %>% 
+  compose(i = 2, j = c(3,8), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = c(2), border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  fontsize(size = 11, part = "body") %>%
+  add_footer_row(
+    values = " ",
+    colwidths = 10
+  ) %>% 
+  set_table_properties(width = 1, layout = "autofit")
 ```
 
 \pagebreak
 
-### SI Figure 13. Multiverse results for Poverty and violence exposure interactions with task version in the same model. {#fig13}
+### Multiverse results for Poverty and violence exposure interactions with task version in the same model. {#fig13}
 
 ```{r sifig13, fig.height=7.5, fig.width=5.25, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence and task version by poverty"}
 vio_ses_updating
+```
+
+\pagebreak
+
+# Descriptive Statistics of Adversity Indices {#sec3}
+
+```{r sitables6, tab.id = "sitables6", tab.cap = "Correlations and descriptive statistics for interview-based and perceived unpredictability."}
+si_table.06.0 %>% 
+  flextable() %>% 
+  set_header_labels(Variable = "") %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 5
+  ) %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 5
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), as_i("* p "), "< .05, ", as_i("** p "), "< .01"), 
+    part = "footer"
+  ) 
+```
+
+```{r sitables7, tab.id="sitables7", tab.cap="Correlations and descriptive statistics for witnessing and involvement in fights and perceived neighborhood violence. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
+si_table.07.0 %>% 
+  flextable() %>% 
+  set_header_labels(Variable = "") %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 4
+  ) %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 4
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), as_i("* p "), "< .05, ", as_i("** p "), "< .01"), 
+    part = "footer"
+  ) 
+```
+
+```{r sitables8, tab.id="sitables8", tab.cap="Correlations and descriptive statistics for interview, school, and perceived poverty variables."}
+si_table.08.0 %>% 
+  flextable() %>% 
+  set_header_labels(Variable = "") %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 5
+  ) %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 5
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), as_i("* p "), "< .05, ", as_i("** p "), "< .01"), 
+    part = "footer"
+  ) 
 ```

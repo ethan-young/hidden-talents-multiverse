@@ -48,6 +48,7 @@ source("supplement/scripts/1-covariates.R")
 source("supplement/scripts/2-secondary1.R")
 source("supplement/scripts/3-secondary2.R")
 source("supplement/scripts/4-tables.R")
+source("supplement/scripts/5-tables-r1.R")
 
 # Save the entire image ---------------------------------------------------
 save(
@@ -69,5 +70,8 @@ save(
   si_table.04.0,
   si_table.05.0,
   vio_ses_updating,
+  si_table.06.0,
+  si_table.07.0,
+  si_table.08.0,
   file = "supplement/staged-objects.Rdata"
 )
