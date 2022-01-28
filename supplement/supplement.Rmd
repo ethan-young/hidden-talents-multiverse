@@ -484,7 +484,7 @@ si_table.06.0 %>%
   ) 
 ```
 
-```{r sitables7, tab.id="sitables7", tab.cap="Correlations and descriptive statistics for witnessing and involvement in fights and perceived neighborhood violence. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
+```{r sitables7, tab.id="sitables7", tab.cap="Correlations and descriptive statistics for witnessing and involvement in fights and perceived neighborhood violence."}
 si_table.07.0 %>% 
   flextable() %>% 
   set_header_labels(Variable = "") %>% 

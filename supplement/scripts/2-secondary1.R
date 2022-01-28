@@ -299,7 +299,7 @@ unp_shifting <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(faster)","(slower)"), x = 0.13, y = c(.975, .77), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 unp_updating <- 
   plot_grid(
@@ -314,7 +314,7 @@ unp_updating <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.125, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 # Violence ----------------------------------------------------------------
 vio_shifting <- 
@@ -330,7 +330,7 @@ vio_shifting <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(faster)","(slower)"),x = 0.13, y = c(.975, .77), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 vio_updating <- 
   plot_grid(
@@ -345,7 +345,7 @@ vio_updating <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.125, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 # SES  --------------------------------------------------------------------
 ses_shifting <- 
@@ -361,7 +361,7 @@ ses_shifting <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(faster)","(slower)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(faster)","(slower)"), x = 0.125, y = c(.97, .77), size = 8, vjust = 1, hjust = 1, fontface = "italic")
 
 ses_updating <- 
   plot_grid(
@@ -376,4 +376,4 @@ ses_updating <-
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
   ) +
-  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.15, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.125, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")

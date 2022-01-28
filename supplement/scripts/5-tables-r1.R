@@ -22,7 +22,7 @@ si_table.08.0 <-
   data3_composites %>%
   select(matches("ses_(interview)_"), ses_school, ses_perceived) %>% 
   corr_table(
-    c.names = c("Parental Education", "Parental Occupation", "School or Club -Provided", "Perceived"),
+    c.names = c("Parental Education", "Parental Occupation", "School or Club-Provided", "Perceived"),
     numbered = T,
     stats = c("min", "median", "max", "range", "mean", "sd")
   ) %>% 

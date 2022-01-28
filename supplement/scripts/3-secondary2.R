@@ -248,4 +248,5 @@ vio_ses_updating <-
     align = "v", 
     axis  = "lr",
     rel_heights = c(.25,.15,.2,.1,.3)
-  )
+  ) +
+  draw_plot_label(c("(more accurate)","(less accurate)"), x = 0.2, y = c(.95, .78), size = 8, vjust = 1, hjust = 1, fontface = "italic")
