@@ -33,6 +33,7 @@ theme_set(
 )
 
 pval_colors <- c("pos-sig" = "#006D77", "non" = "gray70")
+pval_colors_bw <- c("pos-sig" = "black", "non" = "gray70")
 my_alphas <- c(.5, 1)
 my_limits <- c(1,70)
 
@@ -53,6 +54,7 @@ source("manuscript/scripts/table3.R")
 
 # Figures -----------------------------------------------------------------
 source("manuscript/scripts/figure-2-3.R")
+source("manuscript/scripts/figure-2-3-bw.R")
 
 # In-text statistics ------------------------------------------------------
 ## sample break downs ----
@@ -367,3 +369,6 @@ save(
   file = "manuscript/staged-objects.Rdata"
 )
 
+# save black and white figures --------------------------------------------
+ggsave(filename = "manuscript/figures/figure2-1-bw.pdf", fig2_bw, width = 6.5, height = 7.25, dpi = 600)
+ggsave(filename = "manuscript/figures/figure3-1-bw.pdf", fig3_bw, width = 6.5, height = 7.25, dpi = 600)

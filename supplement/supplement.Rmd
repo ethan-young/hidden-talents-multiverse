@@ -456,7 +456,7 @@ si_table.05.0$`_data` %>%
 
 ### Multiverse results for Poverty and violence exposure interactions with task version in the same model. {#fig13}
 
-```{r sifig13, fig.height=7.5, fig.width=5.25, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence and task version by poverty"}
+```{r sifig13, fig.height=7.5, fig.width=5.25, fig.cap="Interaction plots, p-curves, effect size curves, sample sizes, and specification grids for task version by violence and task version by poverty. Teal lines and points reflect individual multiverse effect sizes with p-values < .05."}
 vio_ses_updating
 ```
 

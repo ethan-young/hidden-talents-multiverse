@@ -12,7 +12,7 @@ library(glue)
 library(htmltools)
 ```
 
-This repository contains data, code, and (some) output for a manuscript entitled "Hidden talents in context: Cognitive performance with abstract versus ecological stimuli among adversity-exposed youth" submitted to and under review at *Child Development*.
+This repository contains data, code, and (some) output for a manuscript entitled "Hidden talents in context: Cognitive performance with abstract versus ecological stimuli among adversity-exposed youth" accepted for publication at *Child Development*.
 
 ## IMPORTANT!!
 

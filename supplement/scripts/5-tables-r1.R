@@ -26,5 +26,5 @@ si_table.08.0 <-
     numbered = T,
     stats = c("min", "median", "max", "range", "mean", "sd")
   ) %>% 
-  add_row(Variable = "Possible Range", `1` = "1-3", `2` = "0-100", `3` = "-0.5, 0.5", `4` = "1-5")
+  add_row(Variable = "Possible Range", `1` = "0-3", `2` = "0-100", `3` = "-0.5, 0.5", `4` = "1-5")
 

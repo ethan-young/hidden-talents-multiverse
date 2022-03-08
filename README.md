@@ -3,8 +3,8 @@ Hidden Talents in Context: Multiverse analysis repository
 
 This repository contains data, code, and (some) output for a manuscript
 entitled “Hidden talents in context: Cognitive performance with abstract
-versus ecological stimuli among adversity-exposed youth” submitted to
-and under review at *Child Development*.
+versus ecological stimuli among adversity-exposed youth” accepted for
+publication at *Child Development*.
 
 ## IMPORTANT!!
 
@@ -71,14 +71,20 @@ Below is a simple visualization of the full directory structure.
     ## │   └── data2_analysis.Rdata
     ## ├── manuscript
     ## │   ├── apa.csl
-    ## │   ├── figure1.pdf
+    ## │   ├── figures
+    ## │   │   ├── figure1-bw.pdf
+    ## │   │   ├── figure1.pdf
+    ## │   │   ├── figure2-1-bw.pdf
+    ## │   │   ├── figure2-1.pdf
+    ## │   │   ├── figure3-1-bw.pdf
+    ## │   │   └── figure3-1.pdf
     ## │   ├── manuscript.Rmd
     ## │   ├── manuscript.docx
-    ## │   ├── nature.csl
     ## │   ├── reference-doc.docx
     ## │   ├── references.bib
     ## │   ├── scripts
     ## │   │   ├── 0-corr_table.R
+    ## │   │   ├── figure-2-3-bw.R
     ## │   │   ├── figure-2-3.R
     ## │   │   ├── rmd-staging.R
     ## │   │   ├── table1.R
