@@ -1,0 +1,99 @@
+---
+output:
+  officedown::rdocx_document:
+    reference_docx: ../reference-doc.docx
+    page_margins:
+      bottom: 1
+      top: 1
+      right: 1
+      left: 1
+      header: .5
+      footer: 0
+      gutter: 0
+    plots:
+      align: center
+      caption:
+        style: Image Caption
+        pre: 'Figure '
+        sep: '. '
+    tables:
+      caption:
+        style: Table Caption
+        pre: 'Table '
+        sep: '. '
+---
+
+```{r setup, include=FALSE}
+# set up chunk options
+knitr::opts_chunk$set(
+  echo = F,
+  fig.align = "center",
+  fig.pos = "!t", 
+  out.extra = "",
+  fig.show = "asis",
+  message = FALSE,
+  tab.topcaption = T,
+  warning = FALSE
+)
+
+# load libraries
+library(tidyverse)
+library(officer)
+library(flextable)
+
+# load all data and objects
+load("../staged-objects.Rdata")
+
+# set up flextable for tables
+set_flextable_defaults(
+  font.family = "Times", 
+  font.size = 10,
+  font.color = "black",
+  line_spacing = 1,
+  padding.bottom = 1, 
+  padding.top = 1,
+  padding.left = 1,
+  padding.right = 1
+)
+```
+
+```{r table1, tab.id = "table1", tab.cap.style = "Table Caption", tab.cap="Bivariate correlations and descriptive statistics for adversity measures."}
+table.01.0 %>% 
+  add_column(.after = 4,"empty1" = "") %>% 
+  add_column(.after = 8,"empty2" = "") %>% 
+  flextable() %>%
+  width("empty1", width = .2) %>% 
+  width("empty2", width = .2) %>% 
+  width(j = 1, width = .75) %>% 
+  set_header_labels(Variable = "", empty1 = "", empty2 = "") %>% 
+  add_header_row(
+    values = c(" ", "Unpredictability", " ", "Violence", " ", "Poverty"),
+    colwidths = c(1, 3, 1, 3, 1, 4)
+  ) %>% 
+  border_remove() %>% 
+  border(i = 1, j = c("1","2","3","4","5","6","7","8","9","10"), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 16, border.bottom = fp_border_default(), part = "body") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 13
+  ) %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 13
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), "Column headers denote adversity constructs and rows indicate components. The upper triangle contains sample sizes for each correlation."), 
+    part = "footer"
+  ) %>% 
+  compose(
+    i = 2, j = 1, 
+    as_paragraph(as_i("* p "), "< .05, ", as_i("** p "), "< .01"), 
+    part = "footer"
+  ) 
+```

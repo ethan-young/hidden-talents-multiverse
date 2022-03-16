@@ -1,0 +1,108 @@
+---
+output:
+  officedown::rdocx_document:
+    reference_docx: ../reference-doc.docx
+    page_margins:
+      bottom: 1
+      top: 1
+      right: 1
+      left: 1
+      header: .5
+      footer: 0
+      gutter: 0
+    plots:
+      align: center
+      caption:
+        style: Image Caption
+        pre: 'Figure '
+        sep: '. '
+    tables:
+      caption:
+        style: Table Caption
+        pre: 'Table '
+        sep: '. '
+---
+
+```{r setup, include=FALSE}
+# set up chunk options
+knitr::opts_chunk$set(
+  echo = F,
+  fig.align = "center",
+  fig.pos = "!t", 
+  out.extra = "",
+  fig.show = "asis",
+  message = FALSE,
+  tab.topcaption = T,
+  warning = FALSE
+)
+
+# load libraries
+library(tidyverse)
+library(officer)
+library(flextable)
+
+# load all data and objects
+load("../staged-objects.Rdata")
+
+# set up flextable for tables
+set_flextable_defaults(
+  font.family = "Times", 
+  font.size = 10,
+  font.color = "black",
+  line_spacing = 1,
+  padding.bottom = 1, 
+  padding.top = 1,
+  padding.left = 1,
+  padding.right = 1
+)
+```
+
+```{r table3, tab.id = "table3", tab.cap.style = "Table Caption", tab.cap = "Median simple effects for task version and adversity."}
+table.03.0 %>% 
+  ungroup() %>%
+  mutate(iv = factor(iv, c("Unpredictability","Violence","Poverty"))) %>%
+  arrange(dv,iv) %>% 
+  select(-dv) %>% 
+  add_column(.after = 5,"empty1" = "") %>% 
+  add_row(.before = 1, "iv" = "Attention Shifting") %>% 
+  add_row(.after = 4, "iv" = "Working Memory Updating") %>% 
+  flextable() %>% 
+  merge_h_range(i = 1, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 5, j1 = 1, j2 = 10) %>% 
+  bold(i = c(1,5), j = 1) %>% 
+  padding(i = c(2:4, 6:8), j = 1, padding.left = 10) %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(iv = "", empty1 = "") %>% 
+  add_header_row(
+    values = c(" ", "Task Version", " ", "Adversity Exposure"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2), as_paragraph(as_i("b "), "(abstract)"), part = "header") %>% 
+  compose(i = 2, j = c(4), as_paragraph(as_i("b "), "(ecological)"), part = "header") %>% 
+  compose(i = 2, j = c(7), as_paragraph(as_i("b "), "(low)"), part = "header") %>% 
+  compose(i = 2, j = c(9), as_paragraph(as_i("b "), "(high)"), part = "header") %>% 
+  compose(i = 2, j = c(3,8), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 8, border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  fontsize(size = 11, part = "body") %>%
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 10
+  ) %>% 
+    add_footer_row(
+    values = " ",
+    colwidths = 10
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), "Simple effects are unstandardized. Task Version reflects the median simple effect of adversity when the task version was abstract and ecological. Adversity reflects the median simple effect of task version when adversity is low (-1 SD) and high (+1 SD). The p (%) columns reflect the number of analyses that produced simple effect p-values < .05."), 
+    part = "footer"
+  )
+```

@@ -1,0 +1,104 @@
+---
+output:
+  officedown::rdocx_document:
+    reference_docx: ../reference-doc.docx
+    page_margins:
+      bottom: 1
+      top: 1
+      right: 1
+      left: 1
+      header: .5
+      footer: 0
+      gutter: 0
+    plots:
+      align: center
+      caption:
+        style: Image Caption
+        pre: 'Figure '
+        sep: '. '
+    tables:
+      caption:
+        style: Table Caption
+        pre: 'Table '
+        sep: '. '
+---
+
+```{r setup, include=FALSE}
+# set up chunk options
+knitr::opts_chunk$set(
+  echo = F,
+  fig.align = "center",
+  fig.pos = "!t", 
+  out.extra = "",
+  fig.show = "asis",
+  message = FALSE,
+  tab.topcaption = T,
+  warning = FALSE
+)
+
+# load libraries
+library(tidyverse)
+library(officer)
+library(flextable)
+
+# load all data and objects
+load("../staged-objects.Rdata")
+
+# set up flextable for tables
+set_flextable_defaults(
+  font.family = "Times", 
+  font.size = 10,
+  font.color = "black",
+  line_spacing = 1,
+  padding.bottom = 1, 
+  padding.top = 1,
+  padding.left = 1,
+  padding.right = 1
+)
+```
+
+```{r table2, tab.id = "table2", tab.cap.style = "Table Caption", tab.cap = "Median standardized effects, 95% confidence intervals, percent significant, and bootstrapped p-values for the main effect of adversity and adversity by task version interactions."}
+table.02.0 %>% 
+  ungroup() %>% 
+  mutate(iv = factor(iv, c("Unpredictability","Violence","Poverty"))) %>%
+  arrange(dv,iv) %>% 
+  select(-dv) %>% 
+  add_column(.after = 5,"empty1" = "") %>% 
+  add_row(.before = 1, "iv" = "Attention Shifting") %>% 
+  add_row(.after = 4, "iv" = "Working Memory Updating") %>% 
+  flextable() %>% 
+  merge_h_range(i = 1, j1 = 1, j2 = 10) %>% 
+  merge_h_range(i = 5, j1 = 1, j2 = 10) %>% 
+  bold(i = c(1,5), j = 1) %>% 
+  padding(i = c(2:4, 6:8), j = 1, padding.left = 10) %>% 
+  width("empty1", width = .2) %>% 
+  set_header_labels(iv = "", empty1 = "", ci_main = "95% CI", ci_int = "95% CI") %>% 
+  add_header_row(
+    values = c(" ", "Main Effect", " ", "Interaction"),
+    colwidths = c(1, 4, 1, 4)
+  ) %>% 
+  compose(i = 2, j = c(2,7), as_paragraph("\U1D6FD"), part = "header") %>% 
+  compose(i = 2, j = c(4,9), as_paragraph(as_i("p "), "(%)"), part = "header") %>% 
+  compose(i = 2, j = c(5,10), as_paragraph(as_i("p")), part = "header") %>% 
+  align(i = 1:2, align = "center", part = "header") %>% 
+  border_remove() %>% 
+  border(i = 1, border.top = fp_border_default(), part = "header") %>% 
+  border(i = 1, j = c(2:5,7:10), border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 2, border.bottom = fp_border_default(), part = "header") %>% 
+  border(i = 8, border.bottom = fp_border_default(), part = "body") %>% 
+  bold(i = 1:2, part = "header") %>% 
+  set_table_properties(width = 1, layout = "autofit") %>% 
+  add_footer_row(
+    values = " ",
+    colwidths = 10
+  ) %>% 
+    add_footer_row(
+    values = " ",
+    colwidths = 10
+  ) %>% 
+  compose(
+    i = 1, j = 1, 
+    as_paragraph(as_i("Note: "), "The p (%) column reflects the number of analyses that produced p-values < .05 for a given multiverse. The total number of analyses for each measure was 64. Overall p-values were computed using a bootstrapped resampling method and reflect the probability of obtaining an effect size as extreme or more extreme given the median effect is 0."), 
+    part = "footer"
+  )
+```
