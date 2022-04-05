@@ -46,6 +46,13 @@ primary_effects_data <-
           .fns = ~ifelse(str_detect(mod_term,"ses"), .x * -1, .x)
         )
       ) %>% 
+      mutate(
+        mod_ci_low1  = ifelse(str_detect(mod_term,"ses"), mod_ci_high, mod_ci_low),
+        mod_ci_high1 = ifelse(str_detect(mod_term,"ses"), mod_ci_low, mod_ci_high),
+        mod_ci_low   = mod_ci_low1,
+        mod_ci_high  = mod_ci_high1
+      ) %>% 
+      select(-mod_ci_low1, -mod_ci_high1) %>% 
       group_by(mod_term) %>% 
       mutate(
         spec_rank  = as.numeric(fct_reorder(as_factor(spec_number), mod_std_coefficient)),

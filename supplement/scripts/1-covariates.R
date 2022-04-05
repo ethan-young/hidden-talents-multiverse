@@ -8,10 +8,12 @@ primary_plots_data <-
                                 mod_term_unique == "Test Environment" ~ "Test~Environment",
                                 str_detect(mod_term_unique,"symbol") ~ str_replace(mod_term_unique,"Task-Version","Task~Version"),
                                 T ~ mod_term_unique),
-    mod_term_num   = case_when(str_detect(mod_term_unique, "Unp~sym") ~ 4,
-                               str_detect(mod_term_unique, "Vio~sym") ~ 5,
-                               str_detect(mod_term_unique, "SES~sym") ~ 6,
-                               T ~ mod_term_num),
+    mod_term_unique = str_replace(mod_term_unique, "SES", "Poverty"),
+    mod_term_unique = str_replace(mod_term_unique, "Poverty~sym", "Pov.~sym"),
+    mod_term_num    = case_when(str_detect(mod_term_unique, "Unp~sym") ~ 4,
+                                str_detect(mod_term_unique, "Vio~sym") ~ 5,
+                                str_detect(mod_term_unique, "Poverty~sym") ~ 6,
+                                T ~ mod_term_num),
     mod_term_label = fct_reorder(mod_term_unique, mod_term_num)
   )
 

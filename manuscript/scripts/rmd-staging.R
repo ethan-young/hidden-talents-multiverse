@@ -369,6 +369,14 @@ save(
   file = "manuscript/staged-objects.Rdata"
 )
 
+# save color figures ------------------------------------------------------
+ggsave(filename = "manuscript/figures/figure2-1.jpg", fig2, width = 6.5, height = 7.25, dpi = 600)
+ggsave(filename = "manuscript/figures/figure3-1.jpg", fig3, width = 6.5, height = 7.25, dpi = 600)
+
 # save black and white figures --------------------------------------------
+## PDF
 ggsave(filename = "manuscript/figures/figure2-1-bw.pdf", fig2_bw, width = 6.5, height = 7.25, dpi = 600)
 ggsave(filename = "manuscript/figures/figure3-1-bw.pdf", fig3_bw, width = 6.5, height = 7.25, dpi = 600)
+## JPEG
+ggsave(filename = "manuscript/figures/figure2-1-bw.jpg", fig2_bw, width = 6.5, height = 7.25, dpi = 600)
+ggsave(filename = "manuscript/figures/figure3-1-bw.jpg", fig3_bw, width = 6.5, height = 7.25, dpi = 600)

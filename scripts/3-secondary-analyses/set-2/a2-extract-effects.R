@@ -42,11 +42,16 @@ secondary_set2_effects <-
         # Do this to reverse code SES to match low SES to High poverty
         across(
           .cols = c(mod_estimate, mod_std.error, mod_statistic, mod_std_coefficient, mod_ci, mod_ci_low, mod_ci_high),
-          .fns = ~ifelse(str_detect(iv,"ses"), .x * -1, .x)
+          .fns = ~ifelse(str_detect(iv,"ses") & str_detect(mod_term,"iv"), .x * -1, .x)
         )
-      )
-      filter(!str_detect(mod_term, "^sd__"))
-      filter(!str_detect(mod_term, "^sd__"))
+      ) %>% 
+      mutate(
+        mod_ci_low1  = ifelse(str_detect(iv,"ses") & str_detect(mod_term,"iv"), mod_ci_high, mod_ci_low),
+        mod_ci_high1 = ifelse(str_detect(iv,"ses") & str_detect(mod_term,"iv"), mod_ci_low, mod_ci_high),
+        mod_ci_low   = mod_ci_low1,
+        mod_ci_high  = mod_ci_high1
+      ) %>% 
+      select(-mod_ci_low1, -mod_ci_high1)
   })
 
 secondary_set2_effects_clean <- 

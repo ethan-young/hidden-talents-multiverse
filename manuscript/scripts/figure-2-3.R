@@ -354,3 +354,176 @@ fig3 <-
   ) + 
   draw_label("Working Memory Updating", x = 0.6, y = .975, hjust = .5, vjust = 0, fontface = "bold")
 
+# For presentations and posters -------------------------------------------
+fig2_simple <- 
+  ggdraw() +
+  draw_plot(
+    plot_grid(
+      spec_curves[[1]]$interactions + theme(panel.background = element_blank(), plot.background = element_blank()),
+      spec_curves[[1]]$p_curve + theme(panel.background = element_blank(), plot.background = element_blank()),
+      nrow  = 2,
+      ncol  = 1, 
+      align = "v", 
+      axis  = "lr",
+      rel_heights = c(.6, .4)
+    ) +
+      draw_plot_label(c("faster","slower"), x = 0.065, y = c(.885, .475), size = 7, vjust = 1, hjust = 1, fontface = "italic"),
+    x = 0, y = 0, width = 1, height = 1
+  ) 
+
+fig3_simple <- 
+  ggdraw() +
+  draw_plot(
+    plot_grid(
+      spec_curves[[2]]$interactions,
+      spec_curves[[2]]$p_curve,
+      nrow  = 2,
+      ncol  = 1, 
+      align = "v", 
+      axis  = "lr",
+      rel_heights = c(.6, .4)
+    ) +
+      draw_plot_label(c("more\naccurate","less\naccurate"), x = 0.04, y = c(.95, .465), size = 7, vjust = 1, hjust = .5, fontface = "italic"),
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+sysfonts::font_add_google("Lato")
+showtext::showtext_auto()
+
+fig_2_3 <- 
+  ggdraw() +
+  draw_plot(
+    plot_grid(
+      spec_curves[[2]]$interactions + 
+        ggtitle("Working Memory Updating\n") + 
+        theme(
+          text = element_text(family = "Lato", color = "white"),
+          element_line(color = "white"),
+          panel.background = element_blank(),
+          plot.background = element_blank(),
+          plot.title = element_text(hjust = 0.5, size = rel(1.75)),
+          plot.margin = margin(1,1,1,1, unit = "lines"),
+          axis.text = element_text(size = rel(1.15), color = "white")
+        ),
+      spec_curves[[1]]$interactions + 
+        ggtitle("Attention Shifting\n") + 
+        scale_color_manual(values = c("")) +
+        scale_fill_manual("Adversity:", labels = c("Low", "High"),values = c("white","gray60")) +
+        theme(
+          text = element_text(family = "Lato", color = "white"),
+          line = element_line(color = "white"),
+          panel.background = element_blank(),
+          plot.background = element_blank(),
+          plot.title = element_text(hjust = 0.5, size = rel(1.75)),
+          plot.margin = margin(1,1,1,1, unit = "lines"),
+          axis.text = element_text(size = rel(1.15), color = "white")
+        ),
+      nrow  = 2,
+      ncol  = 1, 
+      align = "v", 
+      axis  = "lr",
+      rel_heights = c(.5, .5)
+    ) +
+      draw_plot_label(c("faster","slower"), x = 0.06, y = c(.825, .57), size = 7, vjust = 1, hjust = 1) +
+      draw_plot_label(c("more\naccurate","less\naccurate"), x = 0.035, y = c(.335, .1), size = 7, vjust = 1, hjust = .5),
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+fig_2_3_specs <- 
+  ggdraw() +
+  draw_plot(
+    plot_grid(
+      spec_curves[[2]]$p_curve +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          plot.title = element_text(color = NA, size = rel(1.3)),
+        ),
+      spec_curves[[2]]$eff_curve +
+        scale_y_continuous("Beta",limits = c(-.12,.12)) +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          plot.title = element_text(color = NA, size = rel(1.3)),
+        ),
+      spec_curves[[2]]$sample_sizes +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          plot.title = element_text(color = NA, size = rel(1.3)),
+        ),
+      spec_curves[[2]]$spec_grid +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          axis.text.y = element_text(color = NA, size = rel(1)),
+          plot.title = element_text(color = NA, size = rel(1.3)),
+        ),
+      nrow  = 4,
+      ncol  = 1,
+      byrow = F,
+      align = "hv", 
+      axis  = "lr",
+      rel_heights = c(.2,.2,.2,.4)
+    ),
+    x = .35, 
+    y = 0, 
+    width = .5, 
+    height = 1
+  ) +
+  draw_plot(
+    plot_grid(
+      spec_curves[[1]]$p_curve +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          plot.title = element_text(size = rel(1.3))
+        ),
+      spec_curves[[1]]$eff_curve +
+        scale_y_continuous("Beta",limits = c(-.12,.12)) +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          plot.title = element_text(size = rel(1.3))
+        ),
+      spec_curves[[1]]$sample_sizes +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          plot.title = element_text(size = rel(1.3))
+        ),
+      spec_curves[[1]]$spec_grid +
+        theme(
+          text = element_text(family = "Lato"),
+          axis.text = element_text(size = rel(1)),
+          plot.title = element_text(size = rel(1.3))
+        ),
+      nrow  = 4,
+      ncol  = 1,
+      byrow = F,
+      align = "hv", 
+      axis  = "lr",
+      rel_heights = c(.2,.2,.2,.4)
+    ),
+    x = 0,
+    y = 0,
+    width = .5,
+    height = 1
+  )
+
+
+# save files --------------------------------------------------------------
+ggsave(filename = "manuscript/figures/fig2_simple.jpg", fig2_simple, width = 6.5, height = 4, dpi = 600)
+ggsave(filename = "manuscript/figures/fig2_simple.pdf", fig2_simple, width = 6.5, height = 4, dpi = 600)
+
+ggsave(filename = "manuscript/figures/fig3_simple.jpg", fig3_simple, width = 6.5, height = 4, dpi = 600)
+ggsave(filename = "manuscript/figures/fig3_simple.pdf", fig3_simple, width = 6.5, height = 4, dpi = 600)
+
+ggsave(filename = "manuscript/figures/fig2_3_simple.pdf", fig_2_3, width = 6.5, height = 5.5, dpi = 600)
+ggsave(filename = "manuscript/figures/fig2_3_specs.pdf", fig_2_3_specs, width = 12, height = 6.5, dpi = 600)
